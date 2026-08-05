@@ -23,6 +23,6 @@ Edit the text in `index.html` to update services or business information. The ph
 
 - 0407 390 321
 - markwalsh@hotmail.com.au
-- https://calendly.com/markwalsh-wczo/mark-walsh-meeting
+- https://calendly.com/markwalsh-wczo/mark-walsh-consultation
 
 The `images` folder includes generic placeholders only. Replace them with real Compass Support photography when ready.
