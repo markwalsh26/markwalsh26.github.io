@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your NDIS Business</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        nav {
+            background: #0066cc;
+            color: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .hero {
+            background: #f4f8fc;
+            text-align: center;
+            padding: 100px 8%;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .contact-box {
+            display: inline-block;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.1);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width:768px){
+
+            .menu-btn{
+                display:block;
+            }
+
+            .nav-links{
+                display:none;
+                flex-direction:column;
+                position:absolute;
+                top:60px;
+                left:0;
+                width:100%;
+                background:#0066cc;
+            }
+
+            .nav-links.show{
+                display:flex;
+            }
+
+            .nav-links li{
+                margin:15px;
+            }
+
+            .hero h1{
+                font-size:32px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Your NDIS Business</div>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <h1>Supporting You to Live Your Best Life</h1>
+
+    <p>
+        We provide professional, reliable and person-centred NDIS support
+        tailored to your individual goals and lifestyle.
+    </p>
+
+    <div class="contact-box">
+        <h3>Contact Us</h3>
+        <p>📞 0400 123 456</p>
+        <p>✉️ info@yourbusiness.com.au</p>
+        <p>📍 Sydney, NSW</p>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <br>
+    <p>
+        We are committed to helping participants achieve greater independence,
+        confidence and quality of life through compassionate, personalised
+        support services.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <br>
+
+    <div class="services">
+        <div class="card">
+            <h3>Community Access</h3>
+            <p>Support to attend appointments, social activities and community events.</p>
+        </div>
+
+        <div class="card">
+            <h3>Transport</h3>
+            <p>Reliable transport to work, appointments and daily activities.</p>
+        </div>
+
+        <div class="card">
+            <h3>Employment Support</h3>
+            <p>Helping participants build confidence and achieve employment goals.</p>
+        </div>
+
+        <div class="card">
+            <h3>Health & Wellbeing</h3>
+            <p>Support with exercise, fitness and maintaining a healthy lifestyle.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Get In Touch</h2>
+    <br>
+
+    <p><strong>Phone:</strong> 0400 123 456</p>
+    <p><strong>Email:</strong> info@yourbusiness.com.au</p>
+    <p><strong>Location:</strong> Sydney, NSW</p>
+</section>
+
+<footer>
+    <p>© 2026 Your NDIS Business. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
