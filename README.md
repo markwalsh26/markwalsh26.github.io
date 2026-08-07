@@ -7,7 +7,7 @@ A simple, responsive one-page website for Compass Support, designed to be hosted
 - `index.html` — page content
 - `style.css` — responsive navy-and-gold styling
 - `script.js` — mobile menu, subtle scroll animations and current year
-- `images/` — optional placeholder artwork for future use
+- `images/` — site photography and Compass Support Services branding
 
 ## Publish with GitHub Pages
 
