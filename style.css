@@ -36,4 +36,6 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;bac
 @media(max-width:900px){.reviews-layout{grid-template-columns:1fr}}
 @media(max-width:700px){.hero-content:before{left:-13px;top:78px;height:130px}.service-card{min-height:180px}.services-grid{gap:12px}.values-grid{grid-template-columns:1fr}.value-card{min-height:auto}.feedback-stats,.compliment-list{grid-template-columns:1fr}.site-logo{filter:drop-shadow(0 4px 12px rgba(255,255,255,.15))}}
 html{overflow-x:hidden}
+.service-area{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:-12px 0 28px;color:#fff;font-size:.92rem;font-weight:600}.service-area i,.service-area span{color:var(--gold-light)}
 @media(max-width:560px){.hero{min-height:760px}.hero h1{font-size:clamp(2.55rem,12.5vw,3.1rem);letter-spacing:-.045em}.hero-subtitle{font-size:1rem;line-height:1.55}.audience-pills{margin-bottom:28px}.audience-pills span{font-size:.76rem;padding:6px 10px}}
+@media(max-width:560px){.service-area{gap:6px;font-size:.78rem}}
