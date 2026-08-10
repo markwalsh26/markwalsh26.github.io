@@ -30,6 +30,7 @@ The `images` folder includes generic placeholders only. Replace them with real C
 ## Client feedback approval workflow
 
 - `feedback.html` is intentionally unlisted: it is not linked from the homepage or navigation and asks search engines not to index it.
-- Submissions open a private email to the site owner and are never written to the public website.
+- Submissions are sent privately to the site owner through FormSubmit and are never written to the public website.
+- FormSubmit requires the site owner to confirm the destination address after the first submission. Until that one-time activation link is confirmed, later delivery is not guaranteed.
 - `approved-testimonials.json` is the only data source used by the public testimonial card.
 - To approve a testimonial, first confirm the client's publication permission, then deliberately add the approved wording and display name to `approved-testimonials.json` and publish that change.
