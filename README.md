@@ -26,3 +26,10 @@ Edit the text in `index.html` to update services or business information. The ph
 - https://calendly.com/markwalsh-wczo/mark-walsh-consultation
 
 The `images` folder includes generic placeholders only. Replace them with real Compass Support photography when ready.
+
+## Client feedback approval workflow
+
+- `feedback.html` is intentionally unlisted: it is not linked from the homepage or navigation and asks search engines not to index it.
+- Submissions open a private email to the site owner and are never written to the public website.
+- `approved-testimonials.json` is the only data source used by the public testimonial card.
+- To approve a testimonial, first confirm the client's publication permission, then deliberately add the approved wording and display name to `approved-testimonials.json` and publish that change.

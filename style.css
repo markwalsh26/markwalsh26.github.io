@@ -39,3 +39,13 @@ html{overflow-x:hidden}
 .service-area{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:-12px 0 28px;color:#fff;font-size:.92rem;font-weight:600}.service-area i,.service-area span{color:var(--gold-light)}
 @media(max-width:560px){.hero{min-height:760px}.hero h1{font-size:clamp(2.55rem,12.5vw,3.1rem);letter-spacing:-.045em}.hero-subtitle{font-size:1rem;line-height:1.55}.audience-pills{margin-bottom:28px}.audience-pills span{font-size:.76rem;padding:6px 10px}}
 @media(max-width:560px){.service-area{gap:6px;font-size:.78rem}}
+
+/* Unlisted client feedback page */
+.feedback-page{min-height:100vh}.feedback-header{position:relative;justify-content:center}.feedback-main{padding:clamp(40px,7vw,90px) 20px;background:radial-gradient(circle at 15% 10%,rgba(18,157,151,.16),transparent 30%),linear-gradient(135deg,#03111f,#071f38);min-height:calc(100vh - 82px)}
+.feedback-form-card{max-width:780px;margin:auto;padding:clamp(28px,6vw,60px);border:1px solid rgba(255,255,255,.13);border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.035));box-shadow:var(--shadow)}
+.feedback-form-card h1{font-size:clamp(2.2rem,7vw,4rem);margin:.15em 0;color:#fff}.feedback-form-card>p{color:var(--muted)}.feedback-form-card form{display:grid;gap:24px;margin-top:36px}
+.feedback-form-card fieldset{border:0;padding:0;margin:0}.feedback-form-card legend,.field-label{display:block;margin-bottom:10px;color:#fff;font:700 1rem Montserrat,sans-serif}
+.rating-options,.permission-options,.checkbox-grid{display:grid;gap:10px}.rating-options{grid-template-columns:repeat(5,1fr)}.checkbox-grid{grid-template-columns:1fr 1fr}.rating-options label,.permission-options label,.checkbox-grid label{padding:12px 14px;border:1px solid rgba(255,255,255,.14);border-radius:10px;background:rgba(255,255,255,.045);color:#edf6fb;cursor:pointer}
+.feedback-form-card input[type="text"],.feedback-form-card textarea{width:100%;padding:14px;border:1px solid rgba(255,255,255,.2);border-radius:10px;background:rgba(255,255,255,.08);color:#fff;font:inherit}.feedback-form-card textarea{resize:vertical}.feedback-form-card input:focus,.feedback-form-card textarea:focus{outline:2px solid var(--gold);outline-offset:2px}
+.privacy-note{display:flex;gap:12px;padding:16px;border-radius:12px;background:rgba(18,157,151,.13);color:#dcecf3}.privacy-note i{color:var(--gold-light);margin-top:4px}.feedback-submit{border:0;font:800 1rem "DM Sans",sans-serif;cursor:pointer}.form-status{margin:0;color:var(--gold-light);font-weight:700}
+@media(max-width:700px){.rating-options,.checkbox-grid{grid-template-columns:1fr}.feedback-main{padding-inline:14px}.feedback-form-card{padding:28px 20px}.feedback-header .site-logo{max-width:82vw}}

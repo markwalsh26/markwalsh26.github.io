@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Private client feedback form for Compass Support Services.">
+  <title>Client Feedback | Compass Support Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><link rel="stylesheet" href="style.css?v=3">
+</head>
+<body class="feedback-page">
+  <header class="site-header feedback-header"><a class="brand brand-logo-link" href="index.html" aria-label="Compass Support Services home"><img class="site-logo" src="images/compass-support-services-logo-v2.svg" alt="Compass Support Services — Trust, Respect, Empowerment and Accountability"></a></header>
+  <main class="feedback-main"><section class="feedback-form-card">
+    <p class="eyebrow">Private client feedback</p><h1>How was your experience?</h1>
+    <p>Thank you for taking a minute to share your feedback. Your response is sent privately to Mark and will never appear publicly unless you give permission and Mark approves it.</p>
+    <form id="client-feedback-form">
+      <fieldset><legend>Overall rating</legend><div class="rating-options" aria-label="Overall rating">
+        <label><input type="radio" name="rating" value="5" required> <span>5 — Excellent</span></label><label><input type="radio" name="rating" value="4"> <span>4 — Very good</span></label><label><input type="radio" name="rating" value="3"> <span>3 — Good</span></label><label><input type="radio" name="rating" value="2"> <span>2 — Fair</span></label><label><input type="radio" name="rating" value="1"> <span>1 — Poor</span></label>
+      </div></fieldset>
+      <fieldset><legend>What did Mark do well?</legend><div class="checkbox-grid">
+        <label><input type="checkbox" name="strengths" value="Reliable and punctual"> Reliable and punctual</label><label><input type="checkbox" name="strengths" value="Respectful"> Respectful</label><label><input type="checkbox" name="strengths" value="Supportive"> Supportive</label><label><input type="checkbox" name="strengths" value="Flexible"> Flexible</label><label><input type="checkbox" name="strengths" value="Good communication"> Good communication</label><label><input type="checkbox" name="strengths" value="Friendly and approachable"> Friendly and approachable</label>
+      </div></fieldset>
+      <div><label class="field-label" for="testimonial">A short testimonial or any other feedback</label><textarea id="testimonial" name="testimonial" rows="5" required placeholder="A sentence or two about your experience…"></textarea></div>
+      <div><label class="field-label" for="client-name">Your name</label><input id="client-name" name="clientName" type="text" autocomplete="name" required></div>
+      <fieldset><legend>If Mark approves your testimonial, may it be shown on the website?</legend><div class="permission-options">
+        <label><input type="radio" name="permission" value="Yes — use my first name" required> Yes — use my first name</label><label><input type="radio" name="permission" value="Yes — show it anonymously"> Yes — show it anonymously</label><label><input type="radio" name="permission" value="No — keep it private"> No — keep it private</label>
+      </div></fieldset>
+      <div class="privacy-note"><i class="fa-solid fa-lock" aria-hidden="true"></i><span>Submitting opens a private email addressed to Mark. Please press Send in your email app to finish. Nothing is published automatically.</span></div>
+      <button class="button button-primary feedback-submit" type="submit"><i class="fa-regular fa-paper-plane"></i> Prepare My Feedback Email</button><p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section></main>
+  <footer><div class="footer-main"><p>© <span id="year"></span> Compass Support Services. All rights reserved.</p></div></footer><script src="feedback.js?v=1"></script>
+</body></html>
