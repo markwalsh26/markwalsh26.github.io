@@ -6,21 +6,35 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 // Only entries deliberately added to approved-testimonials.json can appear publicly.
-const testimonialCard=document.getElementById('approved-testimonial');
-if(testimonialCard){
+const testimonialList=document.getElementById('approved-testimonials');
+if(testimonialList){
   fetch('approved-testimonials.json',{cache:'no-store'})
     .then(response=>{if(!response.ok)throw new Error('Testimonials unavailable');return response.json();})
     .then(testimonials=>{
-      const item=Array.isArray(testimonials)?testimonials[0]:null;
-      if(!item)return;
-      const quote=testimonialCard.querySelector('blockquote');
-      const mark=testimonialCard.querySelector('.reviewer-mark');
-      const name=testimonialCard.querySelector('strong');
-      const details=testimonialCard.querySelector('small');
-      if(quote)quote.textContent=`“${item.quote}”`;
-      if(mark)mark.textContent=item.initials||'CS';
-      if(name)name.textContent=item.name||'Anonymous';
-      if(details)details.textContent=item.details||'Approved client feedback';
+      if(!Array.isArray(testimonials)||!testimonials.length)return;
+      testimonialList.replaceChildren(...testimonials.map(item=>{
+        const card=document.createElement('figure');
+        card.className='testimonial-card reveal visible';
+        const icon=document.createElement('i');
+        icon.className='fa-solid fa-quote-left quote-icon';
+        icon.setAttribute('aria-hidden','true');
+        const quote=document.createElement('blockquote');
+        quote.textContent=`“${item.quote}”`;
+        const caption=document.createElement('figcaption');
+        const mark=document.createElement('span');
+        mark.className='reviewer-mark';
+        mark.setAttribute('aria-hidden','true');
+        mark.textContent=item.initials||'CS';
+        const attribution=document.createElement('span');
+        const name=document.createElement('strong');
+        name.textContent=item.name||'Anonymous';
+        const details=document.createElement('small');
+        details.textContent=item.details||'Approved client feedback';
+        attribution.append(name,details);
+        caption.append(mark,attribution);
+        card.append(icon,quote,caption);
+        return card;
+      }));
     })
     .catch(()=>{/* Keep the existing verified testimonial as a safe fallback. */});
 }

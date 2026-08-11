@@ -49,3 +49,8 @@ html{overflow-x:hidden}
 .feedback-form-card input[type="text"],.feedback-form-card input[type="email"],.feedback-form-card textarea{width:100%;padding:14px;border:1px solid rgba(255,255,255,.2);border-radius:10px;background:rgba(255,255,255,.08);color:#fff;font:inherit}.feedback-form-card textarea{resize:vertical}.feedback-form-card input:focus,.feedback-form-card textarea:focus{outline:2px solid var(--gold);outline-offset:2px}.form-honeypot{position:absolute!important;left:-9999px!important}.field-help{margin:7px 0 0;color:var(--muted);font-size:.88rem}.field-label span{font-weight:500;color:var(--muted)}
 .privacy-note{display:flex;gap:12px;padding:16px;border-radius:12px;background:rgba(18,157,151,.13);color:#dcecf3}.privacy-note i{color:var(--gold-light);margin-top:4px}.feedback-submit{border:0;font:800 1rem "DM Sans",sans-serif;cursor:pointer}.feedback-submit:disabled{cursor:wait;opacity:.75}.form-status{margin:0;color:var(--gold-light);font-weight:700}.form-status-success{color:#74e0d8}
 @media(max-width:700px){.rating-options,.checkbox-grid{grid-template-columns:1fr}.feedback-main{padding-inline:14px}.feedback-form-card{padding:28px 20px}.feedback-header .site-logo{max-width:82vw}}
+
+/* Multiple approved testimonials */
+.reviews-layout{grid-template-columns:1.05fr .95fr}
+.testimonial-list{display:grid;gap:18px}
+@media(max-width:900px){.reviews-layout{grid-template-columns:1fr}}
