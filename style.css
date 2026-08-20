@@ -55,3 +55,15 @@ html{overflow-x:hidden}
 .reviews-layout{grid-template-columns:1.05fr .95fr}
 .testimonial-list{display:grid;gap:18px}
 @media(max-width:900px){.reviews-layout{grid-template-columns:1fr}}
+
+/* Preview refinement: retain the original visual language, with clearer service cards */
+.value-number { display: none; }
+.services-grid { gap: 1.15rem; }
+.service-card {
+  min-height: 10.5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(15, 52, 74, .11);
+  box-shadow: 0 8px 22px rgba(10, 43, 61, .07);
+}
+.service-card h3 { line-height: 1.3; }
