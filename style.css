@@ -164,6 +164,15 @@ html{overflow-x:hidden}
 .value-card i{margin-bottom:24px}
 .reviews-section .section-heading,.section-dark .section-heading{margin-bottom:34px}
 
+/* Staggered Values entrance */
+.values-grid .value-card.reveal{transform:translateY(26px) scale(.94);transition:opacity .48s ease,transform .62s cubic-bezier(.2,.8,.2,1.15)}
+.values-grid .value-card.reveal:nth-child(1){transition-delay:.05s}
+.values-grid .value-card.reveal:nth-child(2){transition-delay:.17s}
+.values-grid .value-card.reveal:nth-child(3){transition-delay:.29s}
+.values-grid .value-card.reveal:nth-child(4){transition-delay:.41s}
+.values-grid .value-card.reveal.visible{transform:translateY(0) scale(1)}
+@media(prefers-reduced-motion:reduce){.values-grid .value-card.reveal{transform:none;transition:none}}
+
 /* Photo-led support outcomes */
 .lifestyle-support{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;background:#041423}
 .lifestyle-support-image,.lifestyle-support-overlay{position:absolute;inset:0;width:100%;height:100%}
@@ -193,3 +202,4 @@ html{overflow-x:hidden}
 .audience-page-item i{color:var(--gold-light);font-size:26px}.audience-page-item h3{color:#fff}.audience-page-item p{color:var(--muted)}
 .audience-page-back{display:inline-flex;gap:8px;align-items:center;color:var(--gold-light);font-weight:700}
 @media(max-width:760px){.lifestyle-support{min-height:620px}.lifestyle-support-image{object-position:64% center}.lifestyle-support-overlay{background:linear-gradient(90deg,rgba(2,13,24,.96),rgba(3,17,31,.72))}.lifestyle-support-copy{margin:auto}.lifestyle-support-links{flex-direction:column;align-items:flex-start}.audience-page-grid{grid-template-columns:1fr}.audience-page-hero{min-height:620px}.audience-page-hero-copy{margin:auto}}
+
