@@ -20,7 +20,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;bac
 .hero:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,#03111f);z-index:1;pointer-events:none}.hero-overlay{background:linear-gradient(90deg,rgba(1,10,19,.95) 0%,rgba(3,17,31,.7) 48%,rgba(3,17,31,.16) 78%),linear-gradient(0deg,rgba(3,17,31,.38),transparent 55%)}
 .hero-content{z-index:3}.hero-content:before{content:"";position:absolute;left:-28px;top:68px;width:4px;height:180px;border-radius:999px;background:linear-gradient(var(--gold),#159d97);box-shadow:0 0 30px rgba(217,161,59,.32)}
 .hero h1{text-shadow:0 8px 35px rgba(0,0,0,.42)}
-.audience-pills{display:flex;gap:10px;flex-wrap:wrap;margin:-12px 0 32px}.audience-pills span{padding:7px 13px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(8px);font-size:.84rem;font-weight:700;letter-spacing:.02em}
+.audience-pills{display:flex;gap:10px;flex-wrap:wrap;margin:-12px 0 32px}.audience-pills span,.audience-pills a{padding:7px 13px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(8px);font-size:.84rem;font-weight:700;letter-spacing:.02em}.audience-pills a:hover{border-color:var(--gold-light);background:rgba(217,161,59,.16)}
 .section{position:relative}.section-heading h2,.experience-card h2,.contact-card h2{color:#fff}.section-heading>p:last-child,.experience-card p{color:var(--muted)}
 #services{background:linear-gradient(180deg,#03111f 0%,#071b30 48%,#03111f 100%);overflow:hidden}#services:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(217,161,59,.12);border-radius:50%;top:-260px;right:-150px;box-shadow:0 0 0 90px rgba(217,161,59,.025),0 0 0 180px rgba(18,157,151,.025)}
 .services-grid{position:relative}.service-card{position:relative;overflow:hidden;min-height:220px;background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.13);box-shadow:0 16px 45px rgba(0,0,0,.2);isolation:isolate}.service-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0,rgba(217,161,59,.18),transparent 48%);opacity:0;transition:.3s;z-index:-1}.service-card:after{content:"";position:absolute;width:86px;height:86px;border-radius:50%;background:rgba(18,157,151,.08);right:-28px;bottom:-30px}.service-card:hover{transform:translateY(-8px);border-color:rgba(217,161,59,.65);box-shadow:0 24px 60px rgba(0,0,0,.34)}.service-card:hover:before{opacity:1}.service-card i{display:grid;place-items:center;width:64px;height:64px;border-radius:18px;background:linear-gradient(145deg,rgba(217,161,59,.22),rgba(18,157,151,.16));border:1px solid rgba(217,161,59,.3);font-size:27px;box-shadow:inset 0 1px rgba(255,255,255,.2),0 12px 28px rgba(0,0,0,.2)}.service-card h3{color:#f5f9fc;font-size:1.02rem}
@@ -163,3 +163,33 @@ html{overflow-x:hidden}
 .value-card{min-height:225px}
 .value-card i{margin-bottom:24px}
 .reviews-section .section-heading,.section-dark .section-heading{margin-bottom:34px}
+
+/* Photo-led support outcomes */
+.lifestyle-support{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;background:#041423}
+.lifestyle-support-image,.lifestyle-support-overlay{position:absolute;inset:0;width:100%;height:100%}
+.lifestyle-support-image{object-fit:cover;object-position:center 42%}
+.lifestyle-support-overlay{background:linear-gradient(90deg,rgba(2,13,24,.96) 0%,rgba(3,17,31,.78) 48%,rgba(3,17,31,.22) 100%)}
+.lifestyle-support-copy{position:relative;z-index:1;width:min(640px,88%);margin-left:clamp(24px,7vw,110px);padding:70px 0;color:#fff}
+.lifestyle-support-copy h2{margin:.12em 0 .32em;color:#fff;font-size:clamp(2.4rem,5vw,4.8rem);letter-spacing:-.045em}
+.lifestyle-support-copy>p:not(.eyebrow){max-width:540px;color:#d4e1e9;font-size:1.1rem}
+.lifestyle-support-points{display:flex;flex-wrap:wrap;gap:10px;margin:27px 0}
+.lifestyle-support-points span{padding:8px 12px;border-left:2px solid var(--gold);background:rgba(3,17,31,.55);font-weight:700}
+.lifestyle-support-links{display:flex;flex-wrap:wrap;gap:12px}
+.lifestyle-support-links a{display:inline-flex;align-items:center;gap:9px;padding:12px 16px;border:1px solid rgba(255,255,255,.42);border-radius:999px;background:rgba(3,17,31,.65);font-weight:800}
+.lifestyle-support-links a:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+
+/* NDIS and aged care subpages */
+.audience-page-hero{min-height:560px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.audience-page-hero img,.audience-page-hero:before{position:absolute;inset:0;width:100%;height:100%}
+.audience-page-hero img{object-fit:cover}
+.audience-page-hero:before{content:"";z-index:1;background:linear-gradient(90deg,rgba(2,13,24,.96),rgba(3,17,31,.62),rgba(3,17,31,.2))}
+.audience-page-hero-copy{position:relative;z-index:2;width:min(720px,88%);margin-left:clamp(24px,7vw,110px);padding:90px 0 70px}
+.audience-page-hero-copy h1{font-size:clamp(2.8rem,6vw,5.8rem)}
+.audience-page-hero-copy>p:not(.eyebrow){max-width:600px;color:#e3edf3;font-size:1.15rem}
+.audience-page-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.audience-page-actions a{padding:12px 17px;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:800}
+.audience-page-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.audience-page-item{padding:26px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035))}
+.audience-page-item i{color:var(--gold-light);font-size:26px}.audience-page-item h3{color:#fff}.audience-page-item p{color:var(--muted)}
+.audience-page-back{display:inline-flex;gap:8px;align-items:center;color:var(--gold-light);font-weight:700}
+@media(max-width:760px){.lifestyle-support{min-height:620px}.lifestyle-support-image{object-position:64% center}.lifestyle-support-overlay{background:linear-gradient(90deg,rgba(2,13,24,.96),rgba(3,17,31,.72))}.lifestyle-support-copy{margin:auto}.lifestyle-support-links{flex-direction:column;align-items:flex-start}.audience-page-grid{grid-template-columns:1fr}.audience-page-hero{min-height:620px}.audience-page-hero-copy{margin:auto}}
