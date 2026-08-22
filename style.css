@@ -176,7 +176,7 @@ html{overflow-x:hidden}
 /* Photo-led support outcomes */
 .lifestyle-support{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden;background:#041423}
 .lifestyle-support-image,.lifestyle-support-overlay{position:absolute;inset:0;width:100%;height:100%}
-.lifestyle-support-image{object-fit:cover;object-position:center 28%}
+.lifestyle-support-image{object-fit:cover;object-position:center center}
 .lifestyle-support-overlay{background:linear-gradient(90deg,rgba(2,13,24,.96) 0%,rgba(3,17,31,.78) 48%,rgba(3,17,31,.22) 100%)}
 .lifestyle-support-copy{position:relative;z-index:1;width:min(640px,88%);margin-left:clamp(24px,7vw,110px);padding:70px 0;color:#fff}
 .lifestyle-support-copy h2{margin:.12em 0 .32em;color:#fff;font-size:clamp(2.4rem,5vw,4.8rem);letter-spacing:-.045em}
@@ -201,5 +201,4 @@ html{overflow-x:hidden}
 .audience-page-item{padding:26px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035))}
 .audience-page-item i{color:var(--gold-light);font-size:26px}.audience-page-item h3{color:#fff}.audience-page-item p{color:var(--muted)}
 .audience-page-back{display:inline-flex;gap:8px;align-items:center;color:var(--gold-light);font-weight:700}
-@media(max-width:760px){.lifestyle-support{min-height:620px}.lifestyle-support-image{object-position:64% 28%}.lifestyle-support-overlay{background:linear-gradient(90deg,rgba(2,13,24,.96),rgba(3,17,31,.72))}.lifestyle-support-copy{margin:auto}.lifestyle-support-links{flex-direction:column;align-items:flex-start}.audience-page-grid{grid-template-columns:1fr}.audience-page-hero{min-height:620px}.audience-page-hero-copy{margin:auto}}
-
+@media(max-width:760px){.lifestyle-support{min-height:620px}.lifestyle-support-image{object-fit:contain;object-position:center center}.lifestyle-support-overlay{background:linear-gradient(90deg,rgba(2,13,24,.96),rgba(3,17,31,.72))}.lifestyle-support-copy{margin:auto}.lifestyle-support-links{flex-direction:column;align-items:flex-start}.audience-page-grid{grid-template-columns:1fr}.audience-page-hero{min-height:620px}.audience-page-hero-copy{margin:auto}}
