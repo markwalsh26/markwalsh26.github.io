@@ -198,7 +198,9 @@ html{overflow-x:hidden}
 .audience-page-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .audience-page-actions a{padding:12px 17px;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:800}
 .audience-page-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.audience-services-photo{display:block;width:min(1100px,100%);max-height:620px;object-fit:cover;margin:0 auto 28px;border-radius:22px;border:1px solid rgba(255,255,255,.12);box-shadow:0 22px 55px rgba(0,0,0,.24)}
 .audience-page-item{padding:26px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035))}
 .audience-page-item i{color:var(--gold-light);font-size:26px}.audience-page-item h3{color:#fff}.audience-page-item p{color:var(--muted)}
 .audience-page-back{display:inline-flex;gap:8px;align-items:center;color:var(--gold-light);font-weight:700}
 @media(max-width:760px){.lifestyle-support{min-height:620px}.lifestyle-support-image{object-fit:contain;object-position:center center}.lifestyle-support-overlay{background:linear-gradient(90deg,rgba(2,13,24,.96),rgba(3,17,31,.72))}.lifestyle-support-copy{margin:auto}.lifestyle-support-links{flex-direction:column;align-items:flex-start}.audience-page-grid{grid-template-columns:1fr}.audience-page-hero{min-height:620px}.audience-page-hero-copy{margin:auto}}
+
