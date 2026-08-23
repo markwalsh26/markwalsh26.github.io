@@ -166,6 +166,16 @@ html{overflow-x:hidden}
 /* Website email enquiry */
 .email-enquiry-form{margin:36px auto 0;padding:clamp(24px,4vw,38px);text-align:left;border:1px solid rgba(255,255,255,.16);border-radius:18px;background:rgba(255,255,255,.055)}.email-enquiry-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}.email-enquiry-heading .eyebrow{margin:0}.email-enquiry-heading h3{margin:3px 0 0;color:#fff;font-size:1.6rem}.email-enquiry-heading>p{margin:0;color:var(--muted)}.email-enquiry-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.email-enquiry-fields label{display:flex;flex-direction:column;gap:7px;color:#fff;font-weight:700}.email-enquiry-fields small{color:var(--muted);font-weight:500}.email-enquiry-fields input,.email-enquiry-fields select,.email-enquiry-fields textarea{width:100%;padding:13px 14px;border:1px solid rgba(255,255,255,.25);border-radius:9px;background:#fff;color:#172235;font:inherit}.email-enquiry-fields input:focus,.email-enquiry-fields select:focus,.email-enquiry-fields textarea:focus{outline:3px solid var(--gold-light);outline-offset:2px}.email-enquiry-message{grid-column:1/-1}.email-enquiry-fields textarea{resize:vertical}.email-enquiry-privacy{display:flex;align-items:center;gap:9px;margin:18px 0!important;color:var(--muted);font-size:.9rem}.email-enquiry-privacy i{color:var(--gold-light)}.email-enquiry-submit{border:0;font:800 1rem "DM Sans",sans-serif;cursor:pointer}.email-enquiry-success{max-width:760px!important;margin:24px auto 0!important;padding:16px;border-radius:10px;background:rgba(18,157,151,.2);color:#fff;font-weight:800}.email-enquiry-success i{margin-right:8px;color:#74e0d8}
 @media(max-width:700px){.email-enquiry-heading{align-items:flex-start;flex-direction:column;gap:5px}.email-enquiry-fields{grid-template-columns:1fr}.email-enquiry-message{grid-column:auto}.email-enquiry-submit{width:100%}}
+
+/* Enquiry confirmation page */
+.thank-you-page{min-height:calc(100vh - 104px);display:grid;place-items:center;padding:70px 20px;background:radial-gradient(circle at 75% 20%,rgba(18,157,151,.18),transparent 28%),linear-gradient(145deg,#081f36,#020d18)}
+.thank-you-card{width:min(760px,100%);padding:clamp(34px,7vw,70px);text-align:center;border:1px solid rgba(255,255,255,.15);border-radius:26px;background:rgba(255,255,255,.06);box-shadow:0 28px 75px rgba(0,0,0,.28)}
+.thank-you-icon{display:grid;place-items:center;width:76px;height:76px;margin:0 auto 24px;border-radius:50%;background:rgba(18,157,151,.2);color:#74e0d8;font-size:36px}
+.thank-you-card h1{margin:.12em 0 .3em;color:#fff;font-size:clamp(2.4rem,6vw,4.8rem)}
+.thank-you-card>p{max-width:590px;margin:0 auto 18px;color:#d5e2ea;font-size:1.12rem}
+.thank-you-urgent{margin-top:30px!important;padding-top:26px;border-top:1px solid rgba(255,255,255,.15)}
+.thank-you-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
+@media(max-width:560px){.thank-you-actions{flex-direction:column}.thank-you-actions .button{width:100%}}
 .meet-mark{padding:0;display:grid;grid-template-columns:minmax(320px,.92fr) minmax(0,1.08fr);background:#041423;min-height:720px}
 .meet-mark-photo{min-height:720px;overflow:hidden;background:#0a2238}
 .meet-mark-photo img{display:block;width:100%;height:100%;min-height:720px;object-fit:cover;object-position:center 18%}

@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=14">
+<link rel="stylesheet" href="style.css?v=15">
 </head>
 <body>
   <header class="site-header">
@@ -34,7 +34,7 @@
         <p class="eyebrow">NDIS &amp; aged care support</p>
         <h1>Support Beyond<br>the Everyday</h1>
         <p class="hero-subtitle">Personalised NDIS and aged-care support to stay active, connected and independent.</p>
-        <div class="audience-pills" aria-label="Explore support options"><a href="ndis-support.html">Explore NDIS Support</a><a href="aged-care-support.html">Explore Aged Care Support</a><a class="hero-call-link" href="tel:0407390321"><i class="fa-solid fa-phone" aria-hidden="true"></i> Talk with Compass</a></div>
+        <div class="audience-pills" aria-label="Explore support options"><a href="ndis-support.html">Explore NDIS Support</a><a href="aged-care-support.html">Explore Aged Care Support</a><a class="hero-call-link" href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact Compass</a></div>
         <p class="service-area"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Greater Sydney <span>&middot;</span> Central Coast <span>&middot;</span> Blue Mountains</p>
       </div>
     </section>
@@ -101,6 +101,7 @@
           <p class="about-mark-title">Mark Walsh <span>Managing Director</span></p>
           <h2>Energy, encouragement and 110%.</h2>
           <p class="about-mark-lead">I’m Mark. I bring energy, honesty and my full commitment to everything I do. My background in corporate leadership, coaching and mentoring—together with my passion for fitness—shapes how I help people build confidence, learn new skills and live life their way.</p>
+          <p>Our team comes from all walks of life, bringing different backgrounds and experience while sharing the same values and passion for going above and beyond.</p>
           <div class="about-mark-paths">
             <span><i class="fa-solid fa-seedling" aria-hidden="true"></i> Confidence &amp; independence</span>
             <span><i class="fa-solid fa-compass" aria-hidden="true"></i> Skills &amp; new possibilities</span>
@@ -190,7 +191,8 @@
         </div>
         <form class="email-enquiry-form" id="email-enquiry" action="https://formsubmit.co/markwalsh@hotmail.com.au" method="POST">
           <input type="hidden" name="_subject" value="New Compass Support Services website enquiry">
-          <input type="hidden" name="_next" value="https://markwalsh26.github.io/?enquiry=sent#contact">
+          <input type="hidden" name="_next" value="https://markwalsh26.github.io/thank-you.html">
+          <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_url" value="https://markwalsh26.github.io/">
           <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -205,7 +207,6 @@
           <p class="email-enquiry-privacy"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your details are used only to respond to your enquiry.</p>
           <button class="button button-primary email-enquiry-submit" type="submit"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Send Enquiry</button>
         </form>
-        <p class="email-enquiry-success" data-enquiry-success role="status" hidden><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Thank you—your enquiry has been sent. Mark will get back to you.</p>
       </div>
     </section>
   </main>
@@ -302,13 +303,6 @@
         practice.textContent = lines[index];
         practice.classList.add('is-changing');
       }, 4200);
-    })();
-  </script>
-  <script>
-    (() => {
-      if (new URLSearchParams(window.location.search).get('enquiry') !== 'sent') return;
-      const success = document.querySelector('[data-enquiry-success]');
-      if (success) success.hidden = false;
     })();
   </script>
 </body>
