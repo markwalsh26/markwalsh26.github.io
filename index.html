@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=12">
+<link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
   <header class="site-header">
@@ -20,6 +20,7 @@
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#services">Services</a>
       <a href="#values">Values</a>
+      <a href="about.html">About</a>
       <a href="#reviews">Reviews</a>
       <a href="#peace-of-mind">Trust</a>
     </nav>
@@ -33,7 +34,7 @@
         <p class="eyebrow">NDIS &amp; aged care support</p>
         <h1>Support Beyond<br>the Everyday</h1>
         <p class="hero-subtitle">Personalised NDIS and aged-care support to stay active, connected and independent.</p>
-        <div class="audience-pills" aria-label="Explore support options"><a href="ndis-support.html">Explore NDIS Support</a><a href="aged-care-support.html">Explore Aged Care Support</a><a class="hero-call-link" href="tel:0407390321"><i class="fa-solid fa-phone" aria-hidden="true"></i> Talk to Mark</a></div>
+        <div class="audience-pills" aria-label="Explore support options"><a href="ndis-support.html">Explore NDIS Support</a><a href="aged-care-support.html">Explore Aged Care Support</a><a class="hero-call-link" href="tel:0407390321"><i class="fa-solid fa-phone" aria-hidden="true"></i> Talk with Compass</a></div>
         <p class="service-area"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Greater Sydney <span>&middot;</span> Central Coast <span>&middot;</span> Blue Mountains</p>
       </div>
     </section>
@@ -89,6 +90,7 @@
         <article class="value-item"><i class="fa-solid fa-person-rays" aria-hidden="true"></i><div><h3>Empowerment</h3><p>Your choices, goals and independence come first.</p></div></article>
         <article class="value-item"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><div><h3>Accountability</h3><p>Doing what we say and taking responsibility.</p></div></article>
       </div>
+      <div class="value-practice reveal" data-value-practice aria-live="polite"><span>What that looks like</span><strong>We listen before making assumptions.</strong></div>
     </section>
 
     <section class="section about-mark" id="why-me">
@@ -97,14 +99,13 @@
         <div class="about-mark-copy reveal">
           <p class="eyebrow">Meet Mark</p>
           <p class="about-mark-title">Mark Walsh <span>Managing Director</span></p>
-          <h2>Supporting you in the direction you choose.</h2>
-          <p class="about-mark-lead">I’m Mark, Managing Director of Compass Support Services. With experience in corporate leadership, coaching and mentoring—and a passion for fitness—I help people build confidence, learn new skills and live life their way.</p>
-          <h3 class="mission-heading">Our Mission</h3>
-          <p>To provide friendly, reliable support that puts your choices first—helping you stay active, build confidence and move forward.</p>
+          <h2>Energy, encouragement and 110%.</h2>
+          <p class="about-mark-lead">I’m Mark. I bring energy, honesty and my full commitment to everything I do. My background in corporate leadership, coaching and mentoring—together with my passion for fitness—shapes how I help people build confidence, learn new skills and live life their way.</p>
           <div class="about-mark-paths">
             <span><i class="fa-solid fa-seedling" aria-hidden="true"></i> Confidence &amp; independence</span>
             <span><i class="fa-solid fa-compass" aria-hidden="true"></i> Skills &amp; new possibilities</span>
           </div>
+          <a class="about-mark-link" href="about.html#meet-mark">Read Mark’s story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -112,7 +113,7 @@
     <section class="section reviews-section" id="reviews">
       <div class="section-heading reveal">
         <p class="eyebrow">Community feedback</p>
-        <h2>Recommended by the People I Support</h2>
+        <h2>Recommended by the People We Support</h2>
       </div>
       <div class="reviews-layout">
         <div class="feedback-summary reveal">
@@ -151,21 +152,31 @@
         <p class="eyebrow">Professional, safe and dependable</p>
         <h2>Your Peace of Mind</h2>
       </div>
-      <div class="trust-grid">
-        <article class="trust-item reveal"><i class="fa-solid fa-shield-halved"></i><span>Public Liability Insurance</span></article>
-        <article class="trust-item reveal"><i class="fa-solid fa-file-shield"></i><span>Professional Indemnity Insurance</span></article>
-        <article class="trust-item reveal"><i class="fa-solid fa-kit-medical"></i><span>First Aid &amp; CPR Certified</span></article>
-        <article class="trust-item reveal"><i class="fa-solid fa-id-card"></i><span>NDIS Worker Screening Check</span></article>
-        <article class="trust-item reveal"><i class="fa-solid fa-user-shield"></i><span>National Police Check</span></article>
-        <article class="trust-item reveal"><i class="fa-solid fa-car-burst"></i><span>Fully insured vehicle for participant transport</span></article>
-        <article class="trust-item reveal"><i class="fa-solid fa-scale-balanced"></i><span>Committed to the NDIS Code of Conduct</span></article>
+      <div class="trust-spotlight reveal" data-trust-spotlight aria-label="Professional safeguards">
+        <div class="trust-spotlight-stage" aria-live="polite">
+          <div class="trust-spotlight-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+          <div class="trust-spotlight-copy">
+            <span class="trust-spotlight-count">01 / 07</span>
+            <h3>Public Liability Insurance</h3>
+            <p>Appropriate cover for dependable, professional support.</p>
+          </div>
+        </div>
+        <div class="trust-spotlight-controls" aria-label="Choose a safeguard">
+          <button type="button" class="is-active" aria-label="Public Liability Insurance" aria-pressed="true"></button>
+          <button type="button" aria-label="Professional Indemnity Insurance" aria-pressed="false"></button>
+          <button type="button" aria-label="First Aid and CPR Certified" aria-pressed="false"></button>
+          <button type="button" aria-label="NDIS Worker Screening Check" aria-pressed="false"></button>
+          <button type="button" aria-label="National Police Check" aria-pressed="false"></button>
+          <button type="button" aria-label="Insured participant transport vehicle" aria-pressed="false"></button>
+          <button type="button" aria-label="NDIS Code of Conduct" aria-pressed="false"></button>
+        </div>
       </div>
     </section>
 
     <section class="contact-section">
       <div class="contact-card reveal">
         <p class="eyebrow">Let’s talk</p>
-        <h2>Let’s see if I’m the right fit</h2>
+        <h2>Let’s see if we’re the right fit</h2>
         <p>Call, SMS or email for a friendly conversation.</p>
         <div class="contact-actions">
           <a class="button button-secondary" href="tel:0407390321"><i class="fa-solid fa-phone"></i> 0407 390 321</a>
@@ -185,5 +196,75 @@
   </footer>
 
   <script src="script.js?v=6"></script>
+  <script>
+    (() => {
+      const spotlight = document.querySelector('[data-trust-spotlight]');
+      if (!spotlight) return;
+      const items = [
+        ['fa-shield-halved', 'Public Liability Insurance', 'Appropriate cover for dependable, professional support.'],
+        ['fa-file-shield', 'Professional Indemnity Insurance', 'Professional protection supporting responsible service delivery.'],
+        ['fa-kit-medical', 'First Aid & CPR Certified', 'Prepared to respond calmly and appropriately when needed.'],
+        ['fa-id-card', 'NDIS Worker Screening Check', 'Required worker screening completed for added confidence.'],
+        ['fa-user-shield', 'National Police Check', 'Background checks completed and kept current.'],
+        ['fa-car-burst', 'Insured Participant Transport', 'A fully insured vehicle for safe, reliable participant transport.'],
+        ['fa-scale-balanced', 'NDIS Code of Conduct', 'Committed to respectful, safe and ethical support.']
+      ];
+      const buttons = [...spotlight.querySelectorAll('.trust-spotlight-controls button')];
+      const icon = spotlight.querySelector('.trust-spotlight-icon i');
+      const count = spotlight.querySelector('.trust-spotlight-count');
+      const title = spotlight.querySelector('h3');
+      const copy = spotlight.querySelector('.trust-spotlight-copy p');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let current = 0;
+      let timer;
+
+      function show(index) {
+        current = index;
+        spotlight.classList.remove('is-changing');
+        void spotlight.offsetWidth;
+        spotlight.classList.add('is-changing');
+        icon.className = `fa-solid ${items[index][0]}`;
+        count.textContent = `${String(index + 1).padStart(2, '0')} / 07`;
+        title.textContent = items[index][1];
+        copy.textContent = items[index][2];
+        buttons.forEach((button, buttonIndex) => {
+          const active = buttonIndex === index;
+          button.classList.toggle('is-active', active);
+          button.setAttribute('aria-pressed', String(active));
+        });
+      }
+
+      function start() {
+        if (reducedMotion) return;
+        clearInterval(timer);
+        timer = setInterval(() => show((current + 1) % items.length), 3800);
+      }
+
+      buttons.forEach((button, index) => button.addEventListener('click', () => {
+        show(index);
+        start();
+      }));
+      spotlight.addEventListener('mouseenter', () => clearInterval(timer));
+      spotlight.addEventListener('mouseleave', start);
+      spotlight.addEventListener('focusin', () => clearInterval(timer));
+      spotlight.addEventListener('focusout', start);
+      start();
+    })();
+  </script>
+  <script>
+    (() => {
+      const practice = document.querySelector('[data-value-practice] strong');
+      if (!practice || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const lines = ['We listen before making assumptions.', 'We arrive prepared and follow through.', 'Your choices guide the support.', 'We communicate openly and honestly.'];
+      let index = 0;
+      setInterval(() => {
+        index = (index + 1) % lines.length;
+        practice.classList.remove('is-changing');
+        void practice.offsetWidth;
+        practice.textContent = lines[index];
+        practice.classList.add('is-changing');
+      }, 4200);
+    })();
+  </script>
 </body>
 </html>
