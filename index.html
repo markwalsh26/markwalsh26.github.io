@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=13">
+<link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
   <header class="site-header">
@@ -161,27 +161,51 @@
             <p>Appropriate cover for dependable, professional support.</p>
           </div>
         </div>
-        <div class="trust-spotlight-controls" aria-label="Choose a safeguard">
-          <button type="button" class="is-active" aria-label="Public Liability Insurance" aria-pressed="true"></button>
-          <button type="button" aria-label="Professional Indemnity Insurance" aria-pressed="false"></button>
-          <button type="button" aria-label="First Aid and CPR Certified" aria-pressed="false"></button>
-          <button type="button" aria-label="NDIS Worker Screening Check" aria-pressed="false"></button>
-          <button type="button" aria-label="National Police Check" aria-pressed="false"></button>
-          <button type="button" aria-label="Insured participant transport vehicle" aria-pressed="false"></button>
-          <button type="button" aria-label="NDIS Code of Conduct" aria-pressed="false"></button>
+        <p class="trust-spotlight-hint"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> Changes automatically every few seconds</p>
+        <div class="trust-carousel-controls" aria-label="Peace of Mind carousel controls">
+          <button type="button" class="trust-carousel-action" data-trust-previous><i class="fa-solid fa-chevron-left" aria-hidden="true"></i><span>Previous</span></button>
+          <div class="trust-spotlight-controls" aria-label="Choose a safeguard">
+            <button type="button" class="is-active" aria-label="Show item 1: Public Liability Insurance" aria-pressed="true"></button>
+            <button type="button" aria-label="Show item 2: Professional Indemnity Insurance" aria-pressed="false"></button>
+            <button type="button" aria-label="Show item 3: First Aid and CPR Certified" aria-pressed="false"></button>
+            <button type="button" aria-label="Show item 4: NDIS Worker Screening Check" aria-pressed="false"></button>
+            <button type="button" aria-label="Show item 5: National Police Check" aria-pressed="false"></button>
+            <button type="button" aria-label="Show item 6: Insured participant transport vehicle" aria-pressed="false"></button>
+            <button type="button" aria-label="Show item 7: NDIS Code of Conduct" aria-pressed="false"></button>
+          </div>
+          <button type="button" class="trust-carousel-action" data-trust-pause aria-pressed="false"><i class="fa-solid fa-pause" aria-hidden="true"></i><span>Pause</span></button>
+          <button type="button" class="trust-carousel-action" data-trust-next><span>Next</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
         </div>
       </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <div class="contact-card reveal">
         <p class="eyebrow">Let’s talk</p>
         <h2>Let’s see if we’re the right fit</h2>
         <p>Call, SMS or email for a friendly conversation.</p>
         <div class="contact-actions">
           <a class="button button-secondary" href="tel:0407390321"><i class="fa-solid fa-phone"></i> 0407 390 321</a>
-          <a class="button button-secondary" href="mailto:markwalsh@hotmail.com.au"><i class="fa-regular fa-envelope"></i> markwalsh@hotmail.com.au</a>
+          <a class="button button-secondary" href="#email-enquiry"><i class="fa-regular fa-envelope"></i> Send an Email Enquiry</a>
         </div>
+        <form class="email-enquiry-form" id="email-enquiry" action="https://formsubmit.co/markwalsh@hotmail.com.au" method="POST">
+          <input type="hidden" name="_subject" value="New Compass Support Services website enquiry">
+          <input type="hidden" name="_next" value="https://markwalsh26.github.io/?enquiry=sent#contact">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_url" value="https://markwalsh26.github.io/">
+          <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="email-enquiry-heading"><div><p class="eyebrow">Email enquiry</p><h3>How can we help?</h3></div><p>Complete the form and Mark will get back to you.</p></div>
+          <div class="email-enquiry-fields">
+            <label><span>Your name</span><input type="text" name="name" autocomplete="name" required></label>
+            <label><span>Email address</span><input type="email" name="email" autocomplete="email" required></label>
+            <label><span>Phone number <small>(optional)</small></span><input type="tel" name="phone" autocomplete="tel"></label>
+            <label><span>Support enquiry</span><select name="supportType" required><option value="">Please choose</option><option>NDIS support</option><option>Aged care support</option><option>General enquiry</option></select></label>
+            <label class="email-enquiry-message"><span>How can we help?</span><textarea name="message" rows="5" required></textarea></label>
+          </div>
+          <p class="email-enquiry-privacy"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your details are used only to respond to your enquiry.</p>
+          <button class="button button-primary email-enquiry-submit" type="submit"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Send Enquiry</button>
+        </form>
+        <p class="email-enquiry-success" data-enquiry-success role="status" hidden><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Thank you—your enquiry has been sent. Mark will get back to you.</p>
       </div>
     </section>
   </main>
@@ -210,6 +234,9 @@
         ['fa-scale-balanced', 'NDIS Code of Conduct', 'Committed to respectful, safe and ethical support.']
       ];
       const buttons = [...spotlight.querySelectorAll('.trust-spotlight-controls button')];
+      const previousButton = spotlight.querySelector('[data-trust-previous]');
+      const nextButton = spotlight.querySelector('[data-trust-next]');
+      const pauseButton = spotlight.querySelector('[data-trust-pause]');
       const icon = spotlight.querySelector('.trust-spotlight-icon i');
       const count = spotlight.querySelector('.trust-spotlight-count');
       const title = spotlight.querySelector('h3');
@@ -217,6 +244,7 @@
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       let current = 0;
       let timer;
+      let manuallyPaused = false;
 
       function show(index) {
         current = index;
@@ -235,7 +263,7 @@
       }
 
       function start() {
-        if (reducedMotion) return;
+        if (reducedMotion || manuallyPaused) return;
         clearInterval(timer);
         timer = setInterval(() => show((current + 1) % items.length), 3800);
       }
@@ -244,6 +272,16 @@
         show(index);
         start();
       }));
+      previousButton.addEventListener('click', () => { show((current - 1 + items.length) % items.length); start(); });
+      nextButton.addEventListener('click', () => { show((current + 1) % items.length); start(); });
+      pauseButton.addEventListener('click', () => {
+        manuallyPaused = !manuallyPaused;
+        clearInterval(timer);
+        pauseButton.setAttribute('aria-pressed', String(manuallyPaused));
+        pauseButton.querySelector('i').className = manuallyPaused ? 'fa-solid fa-play' : 'fa-solid fa-pause';
+        pauseButton.querySelector('span').textContent = manuallyPaused ? 'Play' : 'Pause';
+        if (!manuallyPaused) start();
+      });
       spotlight.addEventListener('mouseenter', () => clearInterval(timer));
       spotlight.addEventListener('mouseleave', start);
       spotlight.addEventListener('focusin', () => clearInterval(timer));
@@ -264,6 +302,13 @@
         practice.textContent = lines[index];
         practice.classList.add('is-changing');
       }, 4200);
+    })();
+  </script>
+  <script>
+    (() => {
+      if (new URLSearchParams(window.location.search).get('enquiry') !== 'sent') return;
+      const success = document.querySelector('[data-enquiry-success]');
+      if (success) success.hidden = false;
     })();
   </script>
 </body>
