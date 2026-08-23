@@ -120,7 +120,7 @@
         <div class="feedback-summary reveal">
           <div class="feedback-stats">
             <div><strong>10</strong><span>recommendations</span></div>
-            <div><strong>80+</strong><span>bookings since April 2026</span></div>
+            <div><strong data-booking-total>80+</strong><span>bookings since April 2026</span></div>
           </div>
           <h3>Top compliments</h3>
           <ul class="compliment-list" aria-label="Top compliments received">
@@ -303,6 +303,17 @@
         practice.textContent = lines[index];
         practice.classList.add('is-changing');
       }, 4200);
+    })();
+  </script>
+  <script>
+    (() => {
+      const total = document.querySelector('[data-booking-total]');
+      if (!total) return;
+      const baselineBookings = 80;
+      const weeklyBookings = 10;
+      const baselineDate = new Date('2026-08-23T00:00:00+10:00');
+      const fullWeeks = Math.max(0, Math.floor((Date.now() - baselineDate.getTime()) / 604800000));
+      total.textContent = `${baselineBookings + (fullWeeks * weeklyBookings)}+`;
     })();
   </script>
 </body>
