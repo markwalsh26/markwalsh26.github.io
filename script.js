@@ -27,7 +27,7 @@ if(serviceHero){
     'virtual-putting.html':['images/virtual-putting-hero.png','A wheelchair user enjoying virtual putting with a support worker'],
     'transport-appointments.html':['images/ndis-services.jpg','Support with transport, appointments and community activities'],
     'home-shopping-daily-living.html':['images/aged-care-services.jpg','Friendly support with shopping, daily routines and life at home'],
-    'gym-fitness.html':['images/mark-personal-training-snap-v3.png','Mark providing friendly one-to-one personal training support to a wheelchair user at Snap Fitness'],
+    'gym-fitness.html':['images/mark-personal-training-snap-v4.png','Mark providing friendly one-to-one personal training support to a wheelchair user at Snap Fitness'],
     'ndis-home-cleaning.html':['images/home-cleaning-support-hero.png','A participant and support worker completing home cleaning together'],
     'ndis-car-washing.html':['images/car-washing-support-hero.png','A participant and support worker washing a personal car together'],
     'holiday-travel.html':['images/hero-banner-full-scene.jpg','A wheelchair user enjoying a supported coastal outing'],
