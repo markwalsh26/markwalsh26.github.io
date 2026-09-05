@@ -46,6 +46,37 @@ if(serviceHero){
     card.style.setProperty('--pointer-x',`${event.clientX-box.left}px`);
     card.style.setProperty('--pointer-y',`${event.clientY-box.top}px`);
   }));
+
+  const heroCopy=serviceHero.querySelector('.service-detail-hero-inner');
+  const serviceNav=document.querySelector('.nav-links');
+  if(serviceNav&&!serviceNav.querySelector('a[href="aged-care-support.html"]')){
+    const agedCareLink=document.createElement('a');
+    agedCareLink.href='aged-care-support.html';agedCareLink.textContent='Aged Care';
+    serviceNav.querySelector('.nav-cta')?.before(agedCareLink);
+  }
+  const audienceTags=document.createElement('div');
+  audienceTags.className='service-audience-tags';
+  audienceTags.innerHTML='<span><i class="fa-solid fa-wheelchair" aria-hidden="true"></i> NDIS</span><span><i class="fa-solid fa-person-cane" aria-hidden="true"></i> Aged care</span><span><i class="fa-solid fa-user" aria-hidden="true"></i> Private support</span>';
+  heroCopy?.querySelector('.eyebrow')?.after(audienceTags);
+
+  const fundingCopy={
+    'community-participation.html':['Social and community participation support may be available when it relates to your disability, goals and plan.','Social support and community engagement may be available when included in your aged-care assessment and service plan.'],
+    'virtual-putting.html':['Funding may cover the extra disability-related support needed to participate; ordinary entry and activity costs are generally personal expenses.','Accompanied social or community activities may be available through your approved aged-care services; venue and activity costs are generally paid separately.'],
+    'transport-appointments.html':['Transport or support-worker assistance depends on your plan, the purpose of the trip and the support delivered.','Assessed transport services may help with appointments, shopping and community activities through Support at Home or CHSP.'],
+    'home-shopping-daily-living.html':['Core supports may include assistance with daily life when it relates to disability needs and your plan.','Domestic assistance and help with shopping or everyday tasks may be available when included in your aged-care assessment and service plan.'],
+    'gym-fitness.html':['Disability-related support to participate may be available when it meets the funding criteria; gym fees and ordinary training costs may remain personal expenses.','Support to stay active may be arranged around assessed needs and goals; confirm whether assistance or personal training is approved or privately paid.'],
+    'ndis-home-cleaning.html':['Assistance with daily life may include essential household cleaning when the need relates to disability and the support is permitted by your plan.','Essential light cleaning and laundry may be available as domestic assistance through Support at Home or CHSP when approved in your assessment.'],
+    'ndis-car-washing.html':['Car washing is not automatically funded. Confirm that the requested assistance is disability-related, permitted by your plan and not an ordinary vehicle cost.','Vehicle running costs are generally personal expenses. Ask your aged-care provider or care partner whether any practical assistance can be included or must be privately paid.'],
+    'holiday-travel.html':['Funding may cover agreed disability-related support during an activity or trip, while accommodation, food, tickets and ordinary travel costs are generally personal expenses.','Assistance for local outings may be available, but holiday travel and ordinary holiday costs are generally not funded aged-care services. Confirm arrangements before booking.'],
+    'social-outings.html':['Funding may cover the extra disability-related support needed to participate; ordinary meals, tickets and membership costs are generally paid by you.','Individual social support, accompanied activities and community engagement may be available through assessed aged-care services.'],
+    'technology-digital-skills.html':['Digital-skills support may be relevant when it relates to disability needs, independence goals and an available support category.','Digital education and support can form part of approved social support and community engagement services.'],
+    'admin-planning.html':['Practical assistance must relate to disability support needs, goals and the supports available in your plan.','Some assistance to maintain personal affairs may be available within approved social support; professional financial or legal advice is not included.']
+  };
+  const funding=serviceHero.parentElement?.querySelector('.service-funding');
+  const copy=fundingCopy[page];
+  if(funding&&copy){
+    funding.innerHTML=`<h3>Three ways to access support</h3><div class="support-pathways"><article><span>NDIS</span><p>${copy[0]}</p><a href="https://www.ndis.gov.au/participants/using-your-funding/understanding-your-ndis-funding/guide-using-your-funding">NDIS funding guide <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></article><article><span>Aged care</span><p>${copy[1]} Your available budget and any contribution depend on your individual arrangements.</p><a href="https://www.myagedcare.gov.au/aged-care-services">My Aged Care services <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></article><article><span>Private support</span><p>You can book and pay Compass directly. You do not need an NDIS plan or aged-care funding, and we will agree the service and price with you before it begins.</p><a href="index.html#contact">Ask about private support <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></article></div><p class="service-disclaimer">Funding and fees depend on your individual plan, assessment, approved services, budget and circumstances. Compass cannot approve funding or guarantee reimbursement. We can help you describe the service clearly before you confirm it with your plan manager, support coordinator, care partner or provider.</p>`;
+  }
 }
 
 // Only entries deliberately added to approved-testimonials.json can appear publicly.
