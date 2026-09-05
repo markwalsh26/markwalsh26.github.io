@@ -5,6 +5,36 @@ document.getElementById('year').textContent=new Date().getFullYear();
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
+// Photo-led service pages: choose the most relevant local image for each service.
+const serviceHero=document.querySelector('.service-detail-hero');
+if(serviceHero){
+  const page=location.pathname.split('/').pop()||'index.html';
+  const heroImages={
+    'community-participation.html':['images/community-hero-inclusive.jpg','People of different ages and abilities enjoying time together in the community'],
+    'virtual-putting.html':['images/virtual-putting-hero.png','A wheelchair user enjoying virtual putting with a support worker'],
+    'transport-appointments.html':['images/ndis-services.jpg','Support with transport, appointments and community activities'],
+    'home-shopping-daily-living.html':['images/aged-care-services.jpg','Friendly support with shopping, daily routines and life at home'],
+    'gym-fitness.html':['images/more-than-everyday-help-v2.png','A wheelchair user taking part in a supported gym session'],
+    'ndis-home-cleaning.html':['images/home-cleaning-support-hero.png','A participant and support worker completing home cleaning together'],
+    'ndis-car-washing.html':['images/car-washing-support-hero.png','A participant and support worker washing a personal car together'],
+    'holiday-travel.html':['images/hero-banner-full-scene.jpg','A wheelchair user enjoying a supported coastal outing'],
+    'social-outings.html':['images/community-hero-inclusive.jpg','A diverse group enjoying a relaxed social outing together'],
+    'technology-digital-skills.html':['images/aged-care-services.jpg','Patient support with technology and everyday skills'],
+    'admin-planning.html':['images/ndis-services.jpg','Practical support with planning and everyday goals']
+  };
+  const selected=heroImages[page];
+  if(selected){
+    const image=document.createElement('img');
+    image.className='service-detail-hero-image';image.src=selected[0];image.alt=selected[1];
+    serviceHero.prepend(image);
+  }
+  document.querySelectorAll('.service-idea').forEach(card=>card.addEventListener('pointermove',event=>{
+    const box=card.getBoundingClientRect();
+    card.style.setProperty('--pointer-x',`${event.clientX-box.left}px`);
+    card.style.setProperty('--pointer-y',`${event.clientY-box.top}px`);
+  }));
+}
+
 // Only entries deliberately added to approved-testimonials.json can appear publicly.
 const testimonialList=document.getElementById('approved-testimonials');
 if(testimonialList){
