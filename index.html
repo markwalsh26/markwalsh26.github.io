@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=22">
+<link rel="stylesheet" href="style.css?v=24">
 </head>
 <body>
   <header class="site-header">
@@ -60,7 +60,7 @@
     </section>
 
     <section class="lifestyle-support" aria-label="Support outcomes">
-      <img class="lifestyle-support-image" src="images/more-than-everyday-help-v2.png" alt="A wheelchair user enjoying a supported personal training session at the gym with their trainer">
+      <img class="lifestyle-support-image" src="images/more-than-everyday-help-v4.png" alt="Mark supporting a wheelchair user during a gym session">
       <div class="lifestyle-support-overlay"></div>
       <div class="lifestyle-support-copy reveal">
         <p class="eyebrow">Support built around you</p>
@@ -85,12 +85,11 @@
         <p>The standards behind every interaction.</p>
       </div>
       <div class="values-panel reveal" aria-label="Compass Support Services values">
-        <article class="value-item"><i class="fa-solid fa-handshake-simple" aria-hidden="true"></i><div><h3>Trust</h3><p>Honest, reliable support you can count on.</p></div></article>
-        <article class="value-item"><i class="fa-solid fa-heart" aria-hidden="true"></i><div><h3>Respect</h3><p>Listening with dignity, care and understanding.</p></div></article>
-        <article class="value-item"><i class="fa-solid fa-person-rays" aria-hidden="true"></i><div><h3>Empowerment</h3><p>Your choices, goals and independence come first.</p></div></article>
-        <article class="value-item"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><div><h3>Accountability</h3><p>Doing what we say and taking responsibility.</p></div></article>
+        <article class="value-item"><button class="value-toggle" type="button" aria-expanded="false"><i class="fa-solid fa-handshake-simple" aria-hidden="true"></i><span class="value-label"><strong class="value-title">Trust</strong><span class="value-plus" aria-hidden="true">+</span></span></button><div class="value-reveal"><p>Honest, reliable support you can count on.</p><strong>We communicate openly and follow through.</strong></div></article>
+        <article class="value-item"><button class="value-toggle" type="button" aria-expanded="false"><i class="fa-solid fa-heart" aria-hidden="true"></i><span class="value-label"><strong class="value-title">Respect</strong><span class="value-plus" aria-hidden="true">+</span></span></button><div class="value-reveal"><p>Listening with dignity, care and understanding.</p><strong>We listen before making assumptions.</strong></div></article>
+        <article class="value-item"><button class="value-toggle" type="button" aria-expanded="false"><i class="fa-solid fa-person-rays" aria-hidden="true"></i><span class="value-label"><strong class="value-title">Empowerment</strong><span class="value-plus" aria-hidden="true">+</span></span></button><div class="value-reveal"><p>Your choices, goals and independence come first.</p><strong>Your choices guide the support.</strong></div></article>
+        <article class="value-item"><button class="value-toggle" type="button" aria-expanded="false"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span class="value-label"><strong class="value-title">Accountability</strong><span class="value-plus" aria-hidden="true">+</span></span></button><div class="value-reveal"><p>Doing what we say and taking responsibility.</p><strong>We arrive prepared and follow through.</strong></div></article>
       </div>
-      <div class="value-practice reveal" data-value-practice aria-live="polite"><span>What that looks like</span><strong>We listen before making assumptions.</strong></div>
     </section>
 
     <section class="section about-mark" id="why-me">
@@ -219,7 +218,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=8"></script>
   <script>
     (() => {
       const spotlight = document.querySelector('[data-trust-spotlight]');
@@ -287,21 +286,6 @@
       spotlight.addEventListener('focusin', () => clearInterval(timer));
       spotlight.addEventListener('focusout', start);
       start();
-    })();
-  </script>
-  <script>
-    (() => {
-      const practice = document.querySelector('[data-value-practice] strong');
-      if (!practice || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      const lines = ['We listen before making assumptions.', 'We arrive prepared and follow through.', 'Your choices guide the support.', 'We communicate openly and honestly.'];
-      let index = 0;
-      setInterval(() => {
-        index = (index + 1) % lines.length;
-        practice.classList.remove('is-changing');
-        void practice.offsetWidth;
-        practice.textContent = lines[index];
-        practice.classList.add('is-changing');
-      }, 4200);
     })();
   </script>
   <script>
