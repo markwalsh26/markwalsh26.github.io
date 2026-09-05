@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=26">
+<link rel="stylesheet" href="style.css?v=28">
 </head>
 <body>
   <header class="site-header">
@@ -18,11 +18,11 @@
     </a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#values">Values</a>
+      <a href="services.html">Services</a>
+      <a href="ndis-support.html">NDIS</a>
+      <a href="aged-care-support.html">Aged Care</a>
       <a href="about.html">About Us</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#peace-of-mind">Trust</a>
+      <a class="nav-cta" href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -37,6 +37,16 @@
         <div class="audience-pills" aria-label="Explore support options"><a href="ndis-support.html">NDIS Support</a><a href="aged-care-support.html">Aged Care Support</a><a href="#contact">Private Support</a></div>
         <p class="service-area"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Greater Sydney <span>&middot;</span> Central Coast <span>&middot;</span> Blue Mountains</p>
       </div>
+    </section>
+
+    <section class="home-pathways" aria-labelledby="explore-compass-title">
+      <div class="home-pathways-heading reveal"><p class="eyebrow">Where would you like to go?</p><h2 id="explore-compass-title">Explore Compass</h2><p>Choose the page that best matches what you are looking for.</p></div>
+      <nav class="home-pathway-grid" aria-label="Explore Compass Support Services">
+        <a class="reveal" href="services.html"><i class="fa-solid fa-compass" aria-hidden="true"></i><span><strong>All Services</strong><small>See every way we can help</small></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="reveal" href="ndis-support.html"><i class="fa-solid fa-wheelchair" aria-hidden="true"></i><span><strong>NDIS Support</strong><small>Support shaped around your plan and goals</small></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="reveal" href="aged-care-support.html"><i class="fa-solid fa-person-cane" aria-hidden="true"></i><span><strong>Aged Care Support</strong><small>Practical help to stay active and connected</small></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="reveal" href="about.html"><i class="fa-regular fa-user" aria-hidden="true"></i><span><strong>About Us</strong><small>Meet Mark and discover why Compass is different</small></span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </nav>
     </section>
 
     <section class="section" id="services">
@@ -57,9 +67,10 @@
         <a class="service-card reveal" href="ndis-car-washing.html"><i class="fa-solid fa-car-on"></i><h3>Personal Car Washing Support</h3><span>Explore support <i class="fa-solid fa-arrow-right"></i></span></a>
         <a class="service-card reveal" href="admin-planning.html"><i class="fa-solid fa-clipboard-list"></i><h3>Admin, Scheduling &amp; Planning</h3><span>Explore support <i class="fa-solid fa-arrow-right"></i></span></a>
       </div>
+      <div class="home-services-more reveal"><a class="button button-primary" href="services.html">View all services <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
     </section>
 
-    <section class="lifestyle-support" aria-label="Support outcomes">
+    <section class="lifestyle-support" aria-label="Support outcomes" hidden>
       <img class="lifestyle-support-image" src="images/more-than-everyday-help-v2.png" alt="A wheelchair user enjoying a supported gym session">
       <div class="lifestyle-support-overlay"></div>
       <div class="lifestyle-support-copy reveal">
@@ -78,7 +89,7 @@
       </div>
     </section>
 
-    <section class="section values-section" id="values">
+    <section class="section values-section" id="values" hidden>
       <div class="section-heading reveal">
         <p class="eyebrow">What guides every interaction</p>
         <h2>Our Values in Action</h2>
@@ -92,7 +103,7 @@
       </div>
     </section>
 
-    <section class="section about-mark" id="why-me">
+    <section class="section about-mark" id="why-me" hidden>
       <div class="about-mark-inner">
         <img class="about-mark-photo reveal" src="images/mark-portrait-2026.jpg" alt="Mark Walsh, Managing Director of Compass Support Services">
         <div class="about-mark-copy reveal">
@@ -110,7 +121,7 @@
       </div>
     </section>
 
-    <section class="section reviews-section" id="reviews">
+    <section class="section reviews-section" id="reviews" hidden>
       <div class="section-heading reveal">
         <p class="eyebrow">Community feedback</p>
         <h2>Recommended by the People We Support</h2>
@@ -147,7 +158,7 @@
       <p class="review-note reveal">Feedback and booking figures shown as reported in July 2026.</p>
     </section>
 
-    <section class="section section-dark" id="peace-of-mind">
+    <section class="section section-dark" id="peace-of-mind" hidden>
       <div class="section-heading reveal">
         <p class="eyebrow">Professional, safe and dependable</p>
         <h2>Your Peace of Mind</h2>
@@ -176,6 +187,10 @@
           <button type="button" class="trust-carousel-action" data-trust-next><span>Next</span><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
         </div>
       </div>
+    </section>
+
+    <section class="home-proof" aria-label="Why people choose Compass">
+      <div class="home-proof-inner reveal"><div><span class="home-proof-number">10</span><span>recommendations</span></div><blockquote>“Punctual, professional and friendly. I will be happy to request future assistance.”</blockquote><div class="home-proof-trust"><span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Fully insured</span><span><i class="fa-solid fa-id-card" aria-hidden="true"></i> Worker screened</span><span><i class="fa-solid fa-kit-medical" aria-hidden="true"></i> First Aid &amp; CPR</span></div></div>
     </section>
 
     <section class="contact-section" id="contact">
@@ -213,6 +228,7 @@
     <div class="trust-banner">Fully Insured <span>•</span> First Aid Certified <span>•</span> NDIS Worker Screening <span>•</span> Police Checked</div>
     <div class="footer-main">
       <div class="footer-brand"><img class="footer-logo" src="images/compass-logo-2026-v2.png" alt="Compass Support Services"></div>
+      <nav class="footer-links" aria-label="Website pages"><a href="services.html">Services</a><a href="ndis-support.html">NDIS Support</a><a href="aged-care-support.html">Aged Care Support</a><a href="about.html">About Us</a><a href="#contact">Contact</a></nav>
       <p>Support for confidence, independence and connection.</p>
       <p class="copyright">© <span id="year"></span> Compass Support Services. All rights reserved.</p>
     </div>
