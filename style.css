@@ -122,6 +122,8 @@ html{overflow-x:hidden}
   grid-row:2;
   margin-top:0;
 }
+.testimonial-rating{grid-column:2;grid-row:2;color:var(--gold-light);font-size:1.05rem;letter-spacing:.16em;line-height:1}
+.testimonial-card.has-rating figcaption{grid-row:3}
 @media(max-width:900px){
   .reviews-layout{grid-template-columns:1fr}
 }

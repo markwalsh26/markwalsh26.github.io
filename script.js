@@ -94,6 +94,11 @@ if(testimonialList){
         icon.setAttribute('aria-hidden','true');
         const quote=document.createElement('blockquote');
         quote.textContent=`“${item.quote}”`;
+        const rating=Number(item.rating);
+        const stars=document.createElement('div');
+        stars.className='testimonial-rating';
+        stars.setAttribute('aria-label',Number.isInteger(rating)&&rating>=1&&rating<=5?`${rating} out of 5 stars`:'Approved client feedback');
+        if(Number.isInteger(rating)&&rating>=1&&rating<=5){stars.textContent='★'.repeat(rating)+'☆'.repeat(5-rating);card.classList.add('has-rating');}
         const caption=document.createElement('figcaption');
         const mark=document.createElement('span');
         mark.className='reviewer-mark';
@@ -106,7 +111,9 @@ if(testimonialList){
         details.textContent=item.details||'Approved client feedback';
         attribution.append(name,details);
         caption.append(mark,attribution);
-        card.append(icon,quote,caption);
+        card.append(icon,quote);
+        if(stars.textContent)card.append(stars);
+        card.append(caption);
         return card;
       }));
     })

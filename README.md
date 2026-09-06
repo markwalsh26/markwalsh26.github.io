@@ -34,3 +34,5 @@ The `images` folder includes generic placeholders only. Replace them with real C
 - FormSubmit requires the site owner to confirm the destination address after the first submission. Until that one-time activation link is confirmed, later delivery is not guaranteed.
 - `approved-testimonials.json` is the only data source used by the public testimonial card.
 - To approve a testimonial, first confirm the client's publication permission, then deliberately add the approved wording and display name to `approved-testimonials.json` and publish that change.
+- Each notification includes a unique submission reference, a compact review summary, and approve/decline `mailto:` shortcuts. The shortcuts create a pre-addressed decision email for Mark's records; they do not publish automatically.
+- Secure one-click publishing is not possible with FormSubmit and static GitHub Pages alone. Automatic publishing would require an authenticated third-party workflow or server-side endpoint with narrowly scoped GitHub write access.
