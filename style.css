@@ -366,3 +366,111 @@ body:has(main#top) #services .service-card:nth-child(n+7){display:none}body:has(
 @media (max-width: 700px) {
   .contact-card > p.contact-flexibility { display: block; }
 }
+
+/* October 2026 – scannable Compass-first homepage, responsive content */
+.compass-services{padding-top:72px;background:linear-gradient(160deg,#061b30,#03111f)}
+.compass-services .section-heading{max-width:840px;margin-bottom:28px}
+.compass-services .section-heading h2,.real-support-section h2,.compass-team-options h2{font-size:clamp(2.2rem,5vw,3.9rem)}
+.compass-services .section-heading>p:last-child,.real-support-section .section-heading>p:last-child,.compass-team-options .section-heading>p:last-child{display:block!important;line-height:1.5}
+.compass-service-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.compass-service-tile{display:flex;flex-direction:column;align-items:flex-start;gap:11px;min-width:0;padding:23px 19px;border-radius:18px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,#0b2945,#071a2d);color:#f5f9fc;box-shadow:0 9px 22px rgba(0,0,0,.14);transition:transform .2s,border-color .2s}
+.compass-service-tile:hover,.compass-service-tile:focus-visible{transform:translateY(-3px);border-color:var(--gold-light)}
+.compass-service-tile>i{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;color:var(--gold-light);background:rgba(217,161,59,.11);font-size:22px}
+.compass-service-tile strong{font:800 1rem/1.28 Montserrat,sans-serif;color:#fff}
+.compass-service-tile span{font-size:.87rem;line-height:1.52;color:#c1d4df}
+.services-inline-more{max-width:900px;margin:23px auto 0;text-align:center;color:#c5d7e2;font-size:.94rem}
+.services-inline-more a{color:var(--gold-light);text-decoration:underline;text-underline-offset:3px}
+.real-support-section{background:#071d30;color:#fff}
+.real-support-section .section-heading{max-width:860px}
+.support-stories-grid{max-width:1150px;margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.support-story{padding:27px 20px;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:rgba(255,255,255,.04)}
+.support-story.highlight{background:linear-gradient(150deg,rgba(217,161,59,.18),rgba(255,255,255,.035));border-color:rgba(217,161,59,.45)}
+.support-story-symbol{display:grid;place-items:center;width:48px;height:48px;margin-bottom:18px;border-radius:13px;background:rgba(217,161,59,.15);color:var(--gold-light);font-size:22px}
+.support-story h3{font-size:1.14rem;color:#fff;margin:0 0 12px}
+.support-story p{font-size:.92rem;line-height:1.6;color:#d3e0e8;margin:0}
+.support-story .eyebrow{font-size:.7rem;color:var(--gold-light);margin-bottom:5px}
+.story-note{max-width:1100px;margin:22px auto 0;color:#9bb0bf;font-size:.79rem}
+.real-support-actions{max-width:1100px;margin:24px auto 0;display:flex;gap:22px;flex-wrap:wrap}
+.real-support-actions a{font-weight:800;color:var(--gold-light);text-decoration:underline;text-underline-offset:3px}
+.home-reviews-upfront{padding-top:78px;padding-bottom:70px}
+.home-reviews-upfront .section-heading{max-width:850px;margin-bottom:18px}
+.home-reviews-upfront .section-heading>p:last-child{display:block!important}
+.home-proof-stats{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 auto 28px}
+.home-proof-stats>div{display:flex;flex-direction:column;min-width:175px;padding:12px 20px;text-align:center;border:1px solid rgba(255,255,255,.16);border-radius:13px;background:rgba(255,255,255,.045)}
+.home-proof-stats strong{font:800 1.75rem Montserrat,sans-serif;color:var(--gold-light)}
+.home-proof-stats span{font-weight:700;color:#fff;font-size:.85rem}
+.home-proof-stats small{color:#b5c6d2;font-size:.7rem}
+.home-reviews-upfront .testimonial-list{gap:12px}
+.home-reviews-upfront .testimonial-card{padding:23px}
+.home-reviews-upfront .testimonial-card blockquote{font-size:.94rem;line-height:1.58}
+.compass-team-options{background:#041625;color:#fff}
+.team-option-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.team-option{padding:28px 22px;border:1px solid rgba(255,255,255,.13);border-radius:17px;background:rgba(255,255,255,.05)}
+.team-option>i{font-size:27px;color:var(--gold-light)}
+.team-option h3{color:#fff;margin:16px 0 10px;font-size:1.13rem}
+.team-option p{color:#cbd9e2;font-size:.92rem;line-height:1.56;margin:0}
+.team-caveat{max-width:950px;margin:20px auto 0;text-align:center;font-size:.78rem;color:#a3b9c7}
+.compass-simple-funding{padding-top:65px;padding-bottom:75px;background:#03111f;color:#fff}
+.funding-quick-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:30px;border:1px solid rgba(217,161,59,.38);border-radius:22px;background:linear-gradient(120deg,#0a2943,#051523)}
+.funding-quick-inner>div{max-width:750px}
+.funding-quick-inner h2{margin:6px 0 10px;color:#fff;font-size:clamp(1.9rem,3.5vw,3rem)}
+.funding-quick-inner p{color:#d7e3eb;margin:0 0 9px;font-size:1rem}
+.funding-quick-inner small{color:#b0c1cd}
+.funding-quick-inner .button{flex-shrink:0;white-space:nowrap}
+.compass-faq{max-width:950px;margin:30px auto 0}
+.compass-faq h3{color:#fff;font-size:1.15rem}
+.compass-faq details{border-bottom:1px solid rgba(255,255,255,.14);padding:13px 0}
+.compass-faq summary{cursor:pointer;color:#f0f7fb;font-weight:750}
+.compass-faq details p{max-width:800px;margin:9px 0;color:#bacdda;font-size:.95rem}
+.hero-primary-actions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 25px}
+.hero-primary-actions .button{border-radius:999px;padding:11px 17px;min-width:auto}
+.hero-primary-actions .button-secondary{border:1px solid rgba(255,255,255,.52)}
+/* Reduce oversized mobile values cards and about-page jump navigation. */
+@media(max-width:1000px){.compass-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.support-stories-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+ .compass-services,.real-support-section,.compass-team-options,.home-reviews-upfront{padding:48px 16px}
+ .compass-services .section-heading,.real-support-section .section-heading,.compass-team-options .section-heading{text-align:left;margin-bottom:22px}
+ .compass-services .section-heading h2,.real-support-section h2,.compass-team-options h2{font-size:clamp(2.15rem,8.8vw,3rem)}
+ .compass-service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .compass-service-tile{padding:15px 12px;gap:8px;border-radius:13px}
+ .compass-service-tile>i{width:35px;height:35px;font-size:18px;border-radius:9px}
+ .compass-service-tile strong{font-size:.84rem}
+ .compass-service-tile span{font-size:.73rem;line-height:1.4}
+ .services-inline-more{text-align:left;font-size:.85rem}
+ .support-stories-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .support-story{padding:17px 12px}
+ .support-story h3{font-size:.95rem;line-height:1.33}
+ .support-story p{font-size:.78rem;line-height:1.5}
+ .support-story-symbol{width:36px;height:36px;font-size:16px;margin-bottom:10px}
+ .real-support-actions{gap:13px;font-size:.87rem}
+ .home-proof-stats{gap:8px}
+ .home-proof-stats>div{min-width:0;width:calc(50% - 4px);padding:11px 9px}
+ .home-reviews-upfront .testimonial-list{display:grid;grid-auto-flow:column;grid-auto-columns:min(84vw,320px);grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 2px 10px;scrollbar-width:thin}
+ .home-reviews-upfront .testimonial-card{scroll-snap-align:start;min-width:0}
+ .team-option-grid{grid-template-columns:1fr;gap:9px}
+ .team-option{padding:16px;display:grid;grid-template-columns:38px 1fr;column-gap:12px;align-items:start}
+ .team-option>i{grid-row:1/3;font-size:23px;margin-top:3px}
+ .team-option h3{font-size:1rem;margin:0 0 6px}
+ .team-option p{font-size:.85rem}
+ .compass-simple-funding{padding:45px 16px}
+ .funding-quick-inner{padding:20px;flex-direction:column;align-items:stretch}
+ .funding-quick-inner .button{width:100%}
+ .values-section.section{padding:43px 14px}
+ .values-section .section-heading{margin-bottom:18px}
+ .values-panel{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+ .values-panel .value-item{min-height:0!important;border-radius:12px}
+ .values-panel .value-toggle{display:flex!important;align-items:center;gap:7px;min-height:58px!important;padding:10px!important}
+ .values-panel .value-toggle>i{width:29px!important;height:29px!important;flex:0 0 29px!important;margin:0!important;font-size:14px!important}
+ .values-panel .value-label{min-width:0;gap:3px;align-items:center;flex:1}
+ .values-panel .value-title{font-size:.76rem;line-height:1.2;overflow-wrap:anywhere}
+ .values-panel .value-plus{flex:0 0 22px;width:22px;height:22px;font-size:.83rem}
+ .values-panel .value-reveal p{font-size:.75rem;line-height:1.45}
+ .about-switch{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:18px}
+ .about-switch a{display:flex;align-items:center;justify-content:center;min-height:41px;padding:8px 7px!important;font-size:.76rem!important;line-height:1.25;text-align:center;border-radius:12px}
+ .about-page-hero-copy{padding-bottom:25px!important}
+ .about-page-hero-copy>p:not(.eyebrow){font-size:1rem!important}
+ .about-mark.section{padding-top:40px;padding-bottom:40px}
+ .hero-primary-actions{gap:7px;margin:0 0 18px}
+ .hero-primary-actions .button{padding:10px 12px;font-size:.8rem;width:auto}
+}
+@media(max-width:360px){.compass-service-grid,.support-stories-grid{grid-template-columns:1fr}.home-proof-stats>div{width:100%}}

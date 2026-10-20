@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+Disallow: /feedback.html
+Sitemap: https://compasssupportservices.au/sitemap.xml
