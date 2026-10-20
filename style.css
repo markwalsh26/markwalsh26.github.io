@@ -307,3 +307,62 @@ body:has(main#top) #services .service-card:nth-child(n+7){display:none}body:has(
 .audience-page-grid{gap:16px}.audience-page-item{display:flex;min-height:220px;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;border:1px solid rgba(255,255,255,.13);border-radius:17px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035));transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}.audience-page-item>i{display:grid;place-items:center;width:60px;height:60px;margin:0 auto 17px;border:1px solid rgba(217,161,59,.42);border-radius:16px;background:rgba(217,161,59,.13);color:var(--gold-light);font-size:24px}.audience-page-item h3{margin:0;color:#fff;font-size:1.02rem}.audience-page-item p{display:-webkit-box;max-width:290px;min-height:2.7em;margin:9px auto 15px;overflow:hidden;color:#b9cad5;font-size:.86rem;line-height:1.4;-webkit-box-orient:vertical;-webkit-line-clamp:2}.audience-page-item:after{content:"Explore support  →";margin-top:auto;color:var(--gold-light);font-size:.82rem;font-weight:800}.audience-page-item:hover,.audience-page-item:focus-visible{transform:translateY(-5px);border-color:rgba(217,161,59,.72);box-shadow:0 18px 42px rgba(0,0,0,.26)}.audience-page-item:focus-visible{outline:3px solid var(--gold-light);outline-offset:3px}.service-list-more{margin-top:32px;text-align:center}.service-list-more .button{gap:10px}.service-directory .audience-page-item{min-height:230px}.service-related .service-list-more{margin-top:30px}
 @media(max-width:760px){.audience-page-grid{grid-template-columns:1fr 1fr;gap:10px}.audience-page-item,.service-directory .audience-page-item{min-height:175px;padding:17px 11px}.audience-page-item>i{width:50px;height:50px;margin-bottom:13px;font-size:20px}.audience-page-item h3{font-size:.88rem}.audience-page-item p{display:none}.audience-page-item:after{font-size:.76rem}.service-list-more{margin-top:26px}.service-list-more .button{width:min(100%,280px)}}
 @media(max-width:390px){.audience-page-grid{grid-template-columns:1fr}.audience-page-item,.service-directory .audience-page-item{min-height:165px}}
+
+/* October 2026: mobile-first banner improvements */
+@media (max-width: 760px) {
+  /* Put image ahead of the copy to keep people visible instead of clipping them behind text. */
+  .hero, .about-page-hero, .audience-page-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    height: auto;
+    overflow: hidden;
+    background: #03111f;
+  }
+  .hero > .hero-image,
+  .about-page-hero > .about-page-hero-image,
+  .audience-page-hero > img {
+    position: relative;
+    inset: auto;
+    display: block;
+    flex: 0 0 auto;
+    width: 100%;
+    height: clamp(185px, 56vw, 300px);
+    object-fit: cover;
+    object-position: right center;
+  }
+  .audience-page-hero > img { object-position: 75% center; }
+  .hero .hero-overlay, .about-page-hero .about-page-hero-overlay,
+  .audience-page-hero::before, .hero::after { display: none; }
+  .hero .hero-content,
+  .about-page-hero .about-page-hero-copy,
+  .audience-page-hero .audience-page-hero-copy {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 28px clamp(22px, 6vw, 36px) 42px;
+    background: linear-gradient(180deg, #071f38, #03111f);
+  }
+  .hero .hero-content::before { left: 9px; top: 30px; height: 94px; }
+  .hero h1, .about-page-hero h1, .audience-page-hero h1 {
+    font-size: clamp(2.15rem, 9.5vw, 3.25rem);
+    line-height: 1.1;
+  }
+  .hero-subtitle { display: block; max-width: 100%; font-size: 1rem; line-height: 1.5; margin-bottom: 20px; }
+  .audience-pills { margin: 14px 0 20px; }
+  .service-area { margin: 0; }
+  .section-heading h2 { font-size: clamp(2.2rem, 8.6vw, 3rem); line-height: 1.12; }
+  #services .section-heading > p:last-child { display: block; }
+}
+.contact-card > p.contact-flexibility {
+  max-width: 620px;
+  margin: 22px auto 0;
+  color: #cbd9e2;
+  font-size: .94rem;
+  line-height: 1.55;
+}
+@media (max-width: 700px) {
+  .contact-card > p.contact-flexibility { display: block; }
+}
