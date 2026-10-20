@@ -24,7 +24,6 @@ if(serviceHero){
   const page=location.pathname.split('/').pop()||'index.html';
   const heroImages={
     'community-participation.html':['images/community-hero-inclusive.jpg','People of different ages and abilities enjoying time together in the community'],
-    'virtual-putting.html':['images/virtual-putting-hero.png','A wheelchair user enjoying virtual putting with a support worker'],
     'transport-appointments.html':['images/ndis-services.jpg','Support with transport, appointments and community activities'],
     'home-shopping-daily-living.html':['images/aged-care-services.jpg','Friendly support with shopping, daily routines and life at home'],
     'gym-fitness.html':['images/mark-personal-training-final-v6.png','Mark providing friendly one-to-one gym support to a wheelchair user'],
@@ -61,7 +60,6 @@ if(serviceHero){
 
   const fundingCopy={
     'community-participation.html':['Social and community participation support may be available when it relates to your disability, goals and plan.','Social support and community engagement may be available when included in your aged-care assessment and service plan.'],
-    'virtual-putting.html':['Funding may cover the extra disability-related support needed to participate; ordinary entry and activity costs are generally personal expenses.','Accompanied social or community activities may be available through your approved aged-care services; venue and activity costs are generally paid separately.'],
     'transport-appointments.html':['Transport or support-worker assistance depends on your plan, the purpose of the trip and the support delivered.','Assessed transport services may help with appointments, shopping and community activities through Support at Home or CHSP.'],
     'home-shopping-daily-living.html':['Core supports may include assistance with daily life when it relates to disability needs and your plan.','Domestic assistance and help with shopping or everyday tasks may be available when included in your aged-care assessment and service plan.'],
     'gym-fitness.html':['Disability-related support to participate may be available when it meets the funding criteria; gym fees and ordinary training costs may remain personal expenses.','Support to stay active may be arranged around assessed needs and goals; confirm whether assistance or personal training is approved or privately paid.'],
@@ -94,11 +92,6 @@ if(testimonialList){
         icon.setAttribute('aria-hidden','true');
         const quote=document.createElement('blockquote');
         quote.textContent=`“${item.quote}”`;
-        const rating=Number(item.rating);
-        const stars=document.createElement('div');
-        stars.className='testimonial-rating';
-        stars.setAttribute('aria-label',Number.isInteger(rating)&&rating>=1&&rating<=5?`${rating} out of 5 stars`:'Approved client feedback');
-        if(Number.isInteger(rating)&&rating>=1&&rating<=5){stars.textContent='★'.repeat(rating)+'☆'.repeat(5-rating);card.classList.add('has-rating');}
         const caption=document.createElement('figcaption');
         const mark=document.createElement('span');
         mark.className='reviewer-mark';
@@ -112,7 +105,6 @@ if(testimonialList){
         attribution.append(name,details);
         caption.append(mark,attribution);
         card.append(icon,quote);
-        if(stars.textContent)card.append(stars);
         card.append(caption);
         return card;
       }));
