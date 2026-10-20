@@ -864,3 +864,109 @@ body:has(main#top) #services .service-card:nth-child(n+7){display:none}body:has(
   .service-directory .audience-page-grid{grid-template-columns:1fr;}
   .service-directory .audience-page-grid > .audience-page-item{min-height:110px;}
 }
+
+/* Group transport feature — prominent, concise and mobile-first. */
+.home-group-transport {
+  display:grid;
+  grid-template-columns: minmax(145px,.28fr) minmax(0,1.2fr) auto;
+  align-items:center;
+  gap:22px;
+  box-sizing:border-box;
+  max-width:1240px;
+  margin:22px auto 0;
+  padding:22px 26px;
+  border:1px solid rgba(217,161,59,.48);
+  border-radius:20px;
+  background:linear-gradient(115deg,#092a45,#041726);
+  box-shadow:0 12px 30px rgba(0,0,0,.16);
+  color:#fff;
+}
+.group-transport-graphic {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px;
+  min-width:0;
+  color:var(--gold-light);
+}
+.group-transport-graphic>i{font-size:clamp(2.4rem,4vw,3.65rem);line-height:1}
+.group-transport-graphic>span{font-size:.68rem;letter-spacing:.09em;font-weight:800;text-align:center}
+.home-group-transport .eyebrow{margin:0 0 7px;font-size:.73rem;color:var(--gold-light)}
+.home-group-transport h2{margin:0 0 8px;color:#fff;font:800 clamp(1.28rem,2.2vw,1.95rem)/1.2 Montserrat,sans-serif}
+.home-group-transport .group-transport-copy>p:not(.eyebrow){color:#d7e4eb;margin:0;line-height:1.5;font-size:.94rem}
+.home-group-transport .group-transport-copy>.group-transport-safety{font-size:.74rem!important;line-height:1.42!important;margin-top:10px!important;color:#bdcfda!important}
+.home-group-transport .group-transport-link{
+  box-sizing:border-box;
+  display:flex;
+  flex-shrink:0;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  min-height:48px;
+  padding:11px 16px;
+  border-radius:12px;
+  color:#081b2e;
+  background:var(--gold);
+  text-decoration:none;
+  font-weight:800;
+  font-size:.84rem;
+  text-align:center;
+}
+.home-group-transport .group-transport-link:hover,.home-group-transport .group-transport-link:focus-visible{background:var(--gold-light)}
+.transport-page-highlights {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  max-width:1180px;
+  margin:0 auto;
+  padding:38px 20px;
+}
+.transport-page-highlights article{box-sizing:border-box;min-width:0;padding:23px;border:1px solid rgba(255,255,255,.16);border-radius:17px;background:#0c2a43}
+.transport-page-highlights i{display:block;font-size:25px;color:var(--gold-light);margin-bottom:12px}
+.transport-page-highlights strong{display:block;color:#fff;font:800 1.05rem/1.35 Montserrat,sans-serif;margin-bottom:8px}
+.transport-page-highlights p{color:#cad8e2;line-height:1.55;font-size:.88rem;margin:0}
+.transport-explainer{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  gap:32px;
+  align-items:start;
+  max-width:1150px;
+  padding:36px 20px 50px;
+  margin:auto;
+}
+.transport-explainer h2{font-size:clamp(1.7rem,3.5vw,2.55rem);color:#fff;margin:10px 0 16px}
+.transport-explainer>div>p:not(.eyebrow){color:#d0dfe8;line-height:1.6}
+.transport-option-list{margin-top:24px}
+.transport-option-list p{display:flex;align-items:flex-start;gap:11px;margin:0 0 13px;color:#d4e2eb;line-height:1.5}
+.transport-option-list i{color:var(--gold-light);margin-top:4px}
+.transport-safety-panel{box-sizing:border-box;border:1px solid rgba(217,161,59,.35);background:#0b2439;border-radius:18px;padding:27px}
+.transport-safety-panel h3{color:#fff;font-size:1.4rem;margin:0 0 14px}
+.transport-safety-panel p:not(.eyebrow){color:#d6e2e9;font-size:.92rem;line-height:1.62;margin:0 0 15px}
+.transport-safety-panel strong{color:#fff}
+.transport-faq{max-width:900px;margin:0 auto;padding:20px 20px 60px}
+.transport-faq h2{color:#fff;font-size:clamp(1.6rem,3vw,2.1rem);margin:0 0 20px}
+.transport-faq details{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.transport-faq summary{cursor:pointer;color:#fff;font-weight:800;line-height:1.4}
+.transport-faq details p{color:#c8d8e3;font-size:.93rem;line-height:1.58;margin:10px 0}
+@media(max-width:1020px){
+ .home-group-transport{margin:18px 18px 0;grid-template-columns:110px minmax(0,1fr);gap:16px}
+ .home-group-transport .group-transport-link{grid-column:2;justify-self:start}
+}
+@media(max-width:760px){
+ .home-group-transport{margin:12px 16px 0;padding:17px 15px;grid-template-columns:45px minmax(0,1fr);gap:9px 13px;border-radius:15px}
+ .group-transport-graphic{padding:0;justify-content:start;align-self:start;margin-top:5px}
+ .group-transport-graphic>i{font-size:28px}
+ .group-transport-graphic>span{display:none}
+ .home-group-transport .eyebrow{font-size:.68rem}
+ .home-group-transport h2{font-size:clamp(1.13rem,4.6vw,1.45rem);margin-bottom:8px}
+ .home-group-transport .group-transport-copy>p:not(.eyebrow){font-size:.83rem;line-height:1.5}
+ .home-group-transport .group-transport-copy>.group-transport-safety{font-size:.72rem!important}
+ .home-group-transport .group-transport-link{grid-column:1/-1;justify-self:stretch;width:100%;min-height:44px;padding:10px 12px;font-size:.8rem}
+ .transport-page-highlights{grid-template-columns:1fr;gap:10px;padding:26px 16px 20px}
+ .transport-page-highlights article{padding:18px}
+ .transport-explainer{grid-template-columns:1fr;gap:20px;padding:25px 16px 35px}
+ .transport-safety-panel{padding:20px}
+ .transport-faq{padding:16px 16px 45px}
+}
