@@ -11,16 +11,16 @@ function setSubmitting(isSubmitting){
 }
 
 function emailFallback(data){
-  const strengths=data.getAll('What Mark did well');
+  const strengths=data.getAll('What the Compass Support Services team did well');
   const body=[
     'Compass Support Services — Client Feedback','',
     'Rating: '+data.get('Rating')+' / 5',
-    'What Mark did well: '+(strengths.length?strengths.join(', '):'Not specified'),'',
+    'What the Compass Support Services team did well: '+(strengths.length?strengths.join(', '):'Not specified'),'',
     'Feedback / testimonial:',data.get('Review or testimonial'),'',
     'Client name: '+data.get('Client name'),
     'Client email: '+(data.get('email')||'Not provided'),
     'Website permission: '+data.get('Website permission'),'',
-    'Approval status: PENDING — do not publish until reviewed and approved by Mark.'
+    'Approval status: PENDING — do not publish until reviewed and approved by the Compass Support Services team.'
   ].join('\n');
   return 'mailto:markwalsh@hotmail.com.au?subject='+encodeURIComponent('Client feedback awaiting approval — '+data.get('Client name'))+'&body='+encodeURIComponent(body);
 }
@@ -65,12 +65,12 @@ form.addEventListener('submit',async event=>{
     if(!response.ok||result.success===false)throw new Error(result.message||'Delivery failed');
 
     form.reset();
-    status.textContent='Thank you — your feedback was emailed privately to Mark and is awaiting review.';
+    status.textContent='Thank you — your feedback was emailed privately to the Compass Support Services team and is awaiting review.';
     status.classList.add('form-status-success');
   }catch(error){
     const link=document.createElement('a');
     link.href=emailFallback(data);
-    link.textContent='open your email app to send it directly to Mark';
+    link.textContent='open your email app to send it to the Compass Support Services team';
     status.replaceChildren('The form service could not send your feedback. Please ',link,'. Nothing has been published.');
   }finally{
     setSubmitting(false);
