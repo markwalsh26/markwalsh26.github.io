@@ -1201,3 +1201,27 @@ body:has(main#top) #services .service-card:nth-child(n+7){display:none}body:has(
   .premium-transport-page .premium-transport-services--compact{padding:16px 17px 10px}
   .premium-transport-services--compact .premium-section-heading{padding-top:15px}
 }
+
+/* 21 October 2026: compact mobile headers; readable branding and footer separators. */
+.site-header:has(.audience-page-links) .brand-logo-link { box-sizing:border-box; flex:0 1 270px; width:auto; min-width:0; max-width:270px; overflow:hidden; }
+.site-header:has(.audience-page-links) .brand-logo-link .site-logo { box-sizing:border-box; display:block; width:100%; max-width:100%; height:auto; max-height:55px; object-fit:contain; }
+.site-header .audience-page-links { min-width:0; flex:0 0 auto; }
+.site-header .audience-page-links .current-page-label { color:#dbe9f2; font-weight:700; }
+.trust-banner span { display:inline!important; margin:0 .48rem; font-size:0; color:var(--gold-light); white-space:nowrap; }
+.trust-banner span::before { content:"|"; font-size:.94rem; font-weight:700; }
+@media (max-width:760px) {
+  .site-header:has(.audience-page-links) { box-sizing:border-box; height:auto; min-height:74px; padding:10px 16px; gap:12px; justify-content:space-between; }
+  .site-header:has(.audience-page-links) .brand-logo-link { flex:0 1 48%; max-width:225px; padding:5px 7px; }
+  .site-header:has(.audience-page-links) .brand-logo-link .site-logo { width:100%; height:auto; max-height:46px; max-width:100%; }
+  .site-header .audience-page-links { flex:0 1 auto; gap:clamp(7px,2vw,13px); align-items:center; justify-content:flex-end; flex-wrap:nowrap; }
+  .site-header .audience-page-links > a,
+  .site-header .audience-page-links .current-page-label { box-sizing:border-box; display:inline-flex; align-items:center; min-height:38px; font-size:clamp(.8rem,3.2vw,.98rem); line-height:1.25; white-space:nowrap; }
+  .site-header .audience-page-links > a:not(:first-child):not(.audience-page-back) { display:none; }
+  .site-header .audience-page-links .audience-page-back { gap:5px; white-space:nowrap; }
+  .trust-banner { line-height:1.7; }
+}
+@media(max-width:390px) {
+  .site-header:has(.audience-page-links) { padding-inline:10px; gap:8px; }
+  .site-header:has(.audience-page-links) .brand-logo-link { flex-basis:48%; padding:4px 6px; }
+  .site-header .audience-page-links { gap:7px; }
+}
