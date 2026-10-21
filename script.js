@@ -26,7 +26,6 @@ if(serviceHero){
     'community-participation.html':['images/community-hero-inclusive.jpg','People of different ages and abilities enjoying time together in the community'],
     'transport-appointments.html':['images/ndis-services.jpg','Support with transport, appointments and community activities'],
     'home-shopping-daily-living.html':['images/aged-care-services.jpg','Friendly support with shopping, daily routines and life at home'],
-    'gym-fitness.html':['images/mark-personal-training-final-v6.png','Mark providing friendly one-to-one gym support to a wheelchair user'],
     'ndis-home-cleaning.html':['images/home-cleaning-support-hero.png','A participant and support worker completing home cleaning together'],
     'ndis-car-washing.html':['images/car-washing-support-hero.png','A participant and support worker washing a personal car together'],
     'holiday-travel.html':['images/hero-banner-full-scene.jpg','A wheelchair user enjoying a supported coastal outing'],
