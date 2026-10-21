@@ -970,3 +970,11 @@ body:has(main#top) #services .service-card:nth-child(n+7){display:none}body:has(
  .transport-safety-panel{padding:20px}
  .transport-faq{padding:16px 16px 45px}
 }
+
+/* Transport partner information */
+.transport-operator-note{max-width:1100px;margin:0 auto 28px;padding:0 20px}
+.transport-operator-note>div{box-sizing:border-box;padding:27px 30px;border:1px solid rgba(217,161,59,.38);border-radius:18px;background:linear-gradient(130deg,#0b2d47,#071a2b)}
+.transport-operator-note h2{margin:8px 0 12px;color:#fff;font-size:clamp(1.5rem,3vw,2.25rem)}
+.transport-operator-note p:not(.eyebrow){max-width:930px;color:#cedde7;line-height:1.6}
+.transport-operator-note a{color:var(--gold-light);font-weight:800;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){.transport-operator-note{padding:0 16px}.transport-operator-note>div{padding:19px}.transport-operator-note p:not(.eyebrow){font-size:.88rem}}
