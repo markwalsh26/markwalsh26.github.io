@@ -113,19 +113,4 @@ if(testimonialList){
 }
 
 
-// Public aggregate from a checked record, not an automatically increasing estimate.
-(function () {
-  const nodes=document.querySelectorAll('[data-service-hours]');
-  if(!nodes.length)return;
-  fetch('service-metrics.json',{cache:'no-store'})
-    .then(response=>{if(!response.ok)throw new Error('Metrics unavailable');return response.json();})
-    .then(data=>{
-      const value=Number(data.deliveredHours);
-      if(!Number.isFinite(value)||value<0)return;
-      const displayed=Math.floor(value/10)*10;
-      nodes.forEach(el=>el.textContent=displayed.toLocaleString('en-AU')+'+');
-      const date=new Date(String(data.asOf)+'T12:00:00');
-      if(!Number.isNaN(date.valueOf()))document.querySelectorAll('[data-hours-asof]').forEach(el=>el.textContent='Recorded through '+date.toLocaleDateString('en-AU',{day:'numeric',month:'long',year:'numeric'}));
-    })
-    .catch(()=>{/* Keep a conservative dated fallback on the page. */});
-})();
+// Public support-hour counters were retired in favour of values-led content.
