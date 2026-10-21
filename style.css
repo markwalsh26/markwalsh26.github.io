@@ -1326,3 +1326,23 @@ body.gym-fitness-page .gym-fitness-hero > .service-detail-hero-inner {
     padding:34px 20px 50px;
   }
 }
+
+/* Gym image: portrait stock photograph is shown whole, with no desktop enlargement or cropping. */
+body.gym-fitness-page .gym-fitness-hero > .service-detail-hero-image {
+  box-sizing:border-box;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:680px;
+  margin-inline:auto;
+  object-fit:contain;
+  object-position:center;
+}
+@media(max-width:760px){
+  body.gym-fitness-page .gym-fitness-hero > .service-detail-hero-image {
+    width:min(100%,460px);
+    max-width:100%;
+    height:auto;
+    max-height:none;
+  }
+}
