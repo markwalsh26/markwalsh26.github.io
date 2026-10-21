@@ -1285,3 +1285,44 @@ body.gym-original-photo .gym-photo-hero .service-detail-hero-inner {
     font-size:clamp(2.1rem,9vw,3.1rem);
   }
 }
+
+
+/* Gym Support: show the complete stock image at its natural aspect ratio, at all widths. */
+body.gym-fitness-page .gym-fitness-hero {
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:flex-start;
+  height:auto;
+  min-height:0;
+  padding:0;
+  background:#020d18;
+}
+body.gym-fitness-page .gym-fitness-hero > .service-detail-hero-image {
+  display:block;
+  position:relative;
+  inset:auto;
+  width:100%;
+  height:auto;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  flex:none;
+  animation:none;
+  background:#020d18;
+}
+body.gym-fitness-page .gym-fitness-hero::before,
+body.gym-fitness-page .gym-fitness-hero::after {display:none;}
+body.gym-fitness-page .gym-fitness-hero > .service-detail-hero-inner {
+  position:relative;
+  width:100%;
+  max-width:1200px;
+  padding:clamp(32px,5vw,64px) clamp(20px,6vw,72px);
+  margin:auto;
+}
+@media(max-width:760px) {
+  body.gym-fitness-page .gym-fitness-hero > .service-detail-hero-inner {
+    padding:34px 20px 50px;
+  }
+}
