@@ -978,3 +978,46 @@ body:has(main#top) #services .service-card:nth-child(n+7){display:none}body:has(
 .transport-operator-note p:not(.eyebrow){max-width:930px;color:#cedde7;line-height:1.6}
 .transport-operator-note a{color:var(--gold-light);font-weight:800;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:760px){.transport-operator-note{padding:0 16px}.transport-operator-note>div{padding:19px}.transport-operator-note p:not(.eyebrow){font-size:.88rem}}
+
+/* October 2026: feature Dan and the Mercedes transport collage without advertising a ramp */
+.group-transport-hero {min-height:0;gap:clamp(20px,4vw,44px)}
+.group-transport-hero>div{flex:1 1 460px;min-width:0}
+.group-transport-hero>.group-transport-hero-photo {
+ display:block;flex:1 1 400px;min-width:0;width:min(100%,520px);max-width:520px;
+ box-sizing:border-box;margin:0;padding:8px;border:1px solid rgba(217,161,59,.45);
+ border-radius:17px;background:#061a2c;box-shadow:0 10px 30px rgba(0,0,0,.22)
+}
+.group-transport-hero-photo img {
+ display:block;width:100%;height:auto;aspect-ratio:400/169;object-fit:cover;border-radius:9px;
+}
+.group-transport-hero-photo figcaption {
+ padding:9px 5px 3px;font-size:.69rem;line-height:1.5;color:#b9ccdb;
+}
+.home-group-transport{grid-template-columns:minmax(180px,.4fr) minmax(0,1fr) auto}
+.home-group-transport .group-transport-graphic {
+ display:flex;flex-direction:column;align-items:stretch;justify-content:center;
+ min-width:0;gap:8px;padding:0
+}
+.home-group-transport .group-transport-graphic img {
+ display:block;width:100%;height:auto;aspect-ratio:400/169;object-fit:cover;border-radius:10px;
+}
+.home-group-transport .group-transport-graphic>span {
+ display:block;font-size:.7rem;letter-spacing:.08em;font-weight:800;
+ color:var(--gold-light);text-align:center
+}
+@media (max-width:1020px){
+ .home-group-transport{grid-template-columns:minmax(150px,.4fr) minmax(0,1fr)}
+ .home-group-transport .group-transport-link{grid-column:2}
+}
+@media (max-width:760px){
+ .group-transport-hero {flex-direction:column;padding-top:34px;gap:18px}
+ .group-transport-hero>div{order:2;flex:none;width:100%}
+ .group-transport-hero>.group-transport-hero-photo{order:1;flex:none;width:100%;max-width:none}
+ .group-transport-hero-photo figcaption{font-size:.68rem}
+ .home-group-transport{grid-template-columns:minmax(0,1fr);margin:13px 16px 0;padding:16px}
+ .home-group-transport .group-transport-graphic{grid-column:1;grid-row:auto;display:flex;width:100%;padding:0;margin:0}
+ .home-group-transport .group-transport-graphic img{width:100%;max-height:200px;object-fit:cover}
+ .home-group-transport .group-transport-graphic>span{display:block}
+ .home-group-transport .group-transport-copy{grid-column:1}
+ .home-group-transport .group-transport-link{grid-column:1}
+}
