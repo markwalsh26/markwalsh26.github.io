@@ -37,7 +37,7 @@ if(serviceHero){
   const selected=heroImages[page];
   if(selected){
     const image=document.createElement('img');
-    image.className='service-detail-hero-image';image.src=selected[0];image.alt=selected[1];
+    image.className='service-detail-hero-image';image.src=selected[0];image.alt=selected[1];image.decoding='async';image.fetchPriority='high';
     serviceHero.prepend(image);
   }
   document.querySelectorAll('.service-idea').forEach(card=>card.addEventListener('pointermove',event=>{

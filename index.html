@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=43">
+<link rel="stylesheet" href="style.css?v=44">
 <link rel="canonical" href="https://compasssupportservices.au/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Compass Support Services | Beyond Everyday Support">
@@ -23,8 +23,8 @@
     <a class="brand brand-logo-link" href="#top" aria-label="Compass Support Services home">
       <img class="site-logo" src="images/compass-logo-2026-v2.png" alt="Compass Support Services">
     </a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-    <nav class="nav-links" aria-label="Main navigation">
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-navigation"><i class="fa-solid fa-bars"></i></button>
+    <nav id="main-navigation" class="nav-links" aria-label="Main navigation">
         <a href="services.html">Our Services</a>
         <a href="real-life-support.html">Real-Life Support</a>
         <a href="reviews.html">Client Feedback</a>
@@ -52,15 +52,14 @@
     </div>
   </div>
 </section>
-<section class="home-group-transport" aria-label="Six-passenger group transport and chauffeur options">
-  <div class="group-transport-graphic"><img src="images/dan-mercedes-transport-concept.jpg" alt="Illustrative Mercedes-Benz van and luxury seating, with an unchanged photograph of Dan" width="400" height="169" loading="lazy"><span>UP TO 6 PASSENGERS</span></div>
+<section class="home-group-transport" aria-label="Six-passenger Mercedes group transport">
+  <div class="group-transport-graphic" aria-hidden="true"><i class="fa-solid fa-van-shuttle"></i></div>
   <div class="group-transport-copy">
-    <p class="eyebrow">Featured transport option</p>
-    <h2>Group Transport &amp; Chauffeur-Style Travel</h2>
-    <p>Travel together for outings, sport, events, appointments or private occasions. Ask about Dan's six-passenger Mercedes-Benz van, airport transfers, outings and comfortable chauffeur-style journeys. Manual sliding transfer-board assistance may be possible for suitable mobility needs.</p>
-    <p class="group-transport-safety">Our manual sliding transfer board is not a ramp or powered lift. Transfers must be assessed, and passengers travel in fixed vehicle seats. Vehicle and group images are illustrative.</p>
+    <p class="eyebrow">Featured transport service</p>
+    <h2>Mercedes Group Transport &amp; Chauffeur</h2>
+    <p>Premium six-passenger travel for airport transfers, work, appointments, group outings and special events.</p>
   </div>
-  <a class="group-transport-link" href="group-chauffeur-transport.html">Explore transport options <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+  <a class="group-transport-link" href="group-chauffeur-transport.html">Explore transport <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
 </section>
 <section class="home-short-services" id="services">
  <div class="short-heading"><p class="eyebrow">What we do</p><h2>How Can We Help?</h2><p>Choose an area that matters to you. We'll work out the details together.</p></div>
@@ -101,14 +100,14 @@
   <footer>
     <div class="trust-banner">Fully Insured <span>•</span> First Aid Certified <span>•</span> NDIS Worker Screening <span>•</span> Police Checked</div>
     <div class="footer-main">
-      <div class="footer-brand"><img class="footer-logo" src="images/compass-logo-2026-v2.png" alt="Compass Support Services"></div>
+      <div class="footer-brand"><img class="footer-logo" src="images/compass-logo-2026-v2.png" alt="Compass Support Services" loading="lazy" decoding="async"></div>
       <nav class="footer-links" aria-label="Website pages"><a href="services.html">Services</a><a href="ndis-support.html">NDIS Support</a><a href="aged-care-support.html">Aged Care Support</a><a href="about.html">About</a><a href="reviews.html">Client Feedback</a><a href="contact.html">Contact</a></nav>
       <p>Support for confidence, independence and connection.</p>
       <p class="copyright">© <span id="year"></span> Compass Support Services. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="script.js?v=13"></script>
+  <script src="script.js?v=14"></script>
   
 </body>
 </html>
