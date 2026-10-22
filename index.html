@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=46">
+<link rel="stylesheet" href="style.css?v=47">
 <link rel="canonical" href="https://compasssupportservices.au/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Compass Support Services | Beyond Everyday Support">
@@ -52,20 +52,12 @@
     </div>
   </div>
 </section>
-<section class="home-group-transport" aria-label="Six-passenger Mercedes group transport">
-  <div class="group-transport-graphic" aria-hidden="true"><i class="fa-solid fa-van-shuttle"></i></div>
-  <div class="group-transport-copy">
-    <p class="eyebrow">Featured transport service</p>
-    <h2>Mercedes Group Transport &amp; Chauffeur</h2>
-    <p>Pre-booked Mercedes travel for up to six passengers, from airport runs to events.</p>
-  </div>
-  <a class="group-transport-link" href="group-chauffeur-transport.html">Explore transport <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-</section>
 <section class="home-short-services" id="services">
  <div class="short-heading"><p class="eyebrow">What we do</p><h2>How Can We Help?</h2><p>Choose an area that matters to you. We'll work out the details together.</p></div>
  <div class="home-service-links">
    <a href="community-participation.html"><i class="fa-solid fa-person-hiking" aria-hidden="true"></i><span><strong>Activities &amp; Outdoors</strong><small>Kayaking, outings, walks &amp; more</small></span><i class="fa-solid fa-arrow-right home-link-arrow" aria-hidden="true"></i></a>
-   <a href="transport-appointments.html"><i class="fa-solid fa-van-shuttle" aria-hidden="true"></i><span><strong>Transport &amp; Appointments</strong><small>Cars, group van, work, errands &amp; events</small></span><i class="fa-solid fa-arrow-right home-link-arrow" aria-hidden="true"></i></a>
+   <a href="transport-appointments.html"><i class="fa-solid fa-car-side" aria-hidden="true"></i><span><strong>Transport &amp; Appointments</strong><small>Work, appointments, errands &amp; outings</small></span><i class="fa-solid fa-arrow-right home-link-arrow" aria-hidden="true"></i></a>
+   <a href="group-chauffeur-transport.html"><i class="fa-solid fa-van-shuttle" aria-hidden="true"></i><span><strong>Mercedes Group Transport &amp; Chauffeur</strong><small>Pre-booked six-passenger van, airport trips &amp; events</small></span><i class="fa-solid fa-arrow-right home-link-arrow" aria-hidden="true"></i></a>
    <a href="personal-support.html"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i><span><strong>Daily Living &amp; Personal Support</strong><small>Meals, household help &amp; routines</small></span><i class="fa-solid fa-arrow-right home-link-arrow" aria-hidden="true"></i></a>
    <a href="work-study-support.html"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i><span><strong>Work, Admin &amp; Life Skills</strong><small>Research, paperwork &amp; decisions</small></span><i class="fa-solid fa-arrow-right home-link-arrow" aria-hidden="true"></i></a>
  </div>
@@ -73,10 +65,36 @@
 </section>
 <section class="home-proof-teaser">
   <div class="home-teaser-review">
-    <p class="eyebrow">Client feedback</p>
-    <blockquote>“Punctual, professional and friendly. I will be happy to request future assistance. Good bloke.”</blockquote>
-    <p class="teaser-attribution">— Lusia T., approved client feedback</p>
-    <a href="reviews.html">Read more client reviews <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    <div class="home-review-top">
+      <p class="eyebrow">Client feedback</p>
+      <span>Swipe to explore</span>
+    </div>
+    <div class="home-review-carousel" id="home-review-carousel" role="region" aria-roledescription="carousel" aria-label="Approved client feedback" tabindex="0">
+      <article class="home-review-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+        <blockquote>“Mark has been supporting me for a few months now, and he’s caring, punctual, reliable and always goes above and beyond. He’s easy to get along with, great fun to be around and someone I can always count on. Highly recommend!”</blockquote>
+        <p class="teaser-attribution">— Nate · Shared with permission</p>
+      </article>
+      <article class="home-review-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+        <blockquote>“Punctual, professional and friendly. I will be happy to request future assistance. Good bloke.”</blockquote>
+        <p class="teaser-attribution">— Lusia T. · 30 July 2026</p>
+      </article>
+      <article class="home-review-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+        <blockquote>“Mark is reliable, easy to get along with and very professional. He’s organised, genuinely cares and always goes the extra mile. The comfortable luxury car is a great bonus and makes getting around that much easier.”</blockquote>
+        <p class="teaser-attribution">— Name withheld at client’s request · Shared with permission</p>
+      </article>
+      <article class="home-review-slide home-review-more" role="group" aria-roledescription="slide" aria-label="4 of 4">
+        <p class="home-review-more-title">Want to hear more?</p>
+        <p>Read more experiences from people we've supported.</p>
+        <a href="reviews.html">Read more client reviews <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </article>
+    </div>
+    <div class="home-review-controls">
+      <span class="home-review-progress" id="home-review-progress" aria-live="polite">1 of 4</span>
+      <div class="home-review-buttons">
+        <button class="home-review-prev" type="button" aria-label="Previous client review" disabled><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+        <button class="home-review-next" type="button" aria-label="Next client review"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
   </div>
   <div class="home-teaser-proof">
     <strong>4</strong><span>Core values</span><small>Trust | Respect | Empowerment | Accountability</small>
@@ -92,7 +110,7 @@
  </div>
 </section>
 <section class="home-contact-strip">
-  <div><p class="eyebrow">Let's talk</p><h2>Not Sure Where to Start?</h2><p>Unsure what support you need or what funding may cover? Have a confidential conversation with Compass. No pressure.</p></div>
+  <div><p class="eyebrow">Let's talk</p><h2>Not Sure Where to Start?</h2><p>Whether you're using NDIS funding, arranging aged care or paying privately, we'll talk through your circumstances, what's practical and the costs before you decide. No pressure.</p></div>
   <a class="button button-primary" href="contact.html">Contact Compass <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
 </section>
 </main>
@@ -107,7 +125,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=15"></script>
+  <script src="script.js?v=16"></script>
   
 </body>
 </html>
