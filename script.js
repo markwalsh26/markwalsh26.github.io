@@ -113,3 +113,69 @@ if(testimonialList){
 
 
 // Public support-hour counters were retired in favour of values-led content.
+
+
+// Homepage client feedback carousel. Source of truth: approved-testimonials.json.
+const homeReviewCarousel=document.getElementById('home-review-carousel');
+if(homeReviewCarousel){
+  const progress=document.getElementById('home-review-progress');
+  const prev=homeReviewCarousel.parentElement.querySelector('.home-review-prev');
+  const next=homeReviewCarousel.parentElement.querySelector('.home-review-next');
+  const slides=()=>Array.from(homeReviewCarousel.querySelectorAll('.home-review-slide'));
+  const updateReviewControls=()=>{
+    const count=slides().length;
+    const index=Math.max(0,Math.min(count-1,Math.round(homeReviewCarousel.scrollLeft/Math.max(1,homeReviewCarousel.clientWidth))));
+    if(progress)progress.textContent=`${index+1} of ${count}`;
+    prev.disabled=index===0;
+    next.disabled=index>=count-1;
+  };
+  const moveReview=(change)=>{
+    const index=Math.round(homeReviewCarousel.scrollLeft/Math.max(1,homeReviewCarousel.clientWidth));
+    const target=Math.max(0,Math.min(slides().length-1,index+change));
+    const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    homeReviewCarousel.scrollTo({left:target*homeReviewCarousel.clientWidth,behavior:reducedMotion?'auto':'smooth'});
+    if(progress)progress.textContent=`${target+1} of ${slides().length}`;
+    prev.disabled=target===0;
+    next.disabled=target===slides().length-1;
+  };
+  prev.addEventListener('click',()=>moveReview(-1));
+  next.addEventListener('click',()=>moveReview(1));
+  homeReviewCarousel.addEventListener('scroll',updateReviewControls,{passive:true});
+  homeReviewCarousel.addEventListener('keydown',event=>{
+    if(event.key==='ArrowRight'||event.key==='ArrowLeft'){
+      event.preventDefault();
+      moveReview(event.key==='ArrowRight'?1:-1);
+    }
+  });
+  window.addEventListener('resize',updateReviewControls);
+  // The HTML includes a verified fallback so reviews remain visible offline or without JavaScript.
+  fetch('approved-testimonials.json',{cache:'no-store'})
+    .then(response=>{if(!response.ok)throw new Error('Approved feedback unavailable');return response.json();})
+    .then(items=>{
+      if(!Array.isArray(items))throw new Error('Invalid approved feedback');
+      const approved=items.filter(item=>item&&typeof item.quote==='string'&&item.quote.trim()).slice(0,3);
+      const cta=homeReviewCarousel.querySelector('.home-review-more');
+      if(!cta)return;
+      const cards=approved.map(item=>{
+        const slide=document.createElement('article');
+        slide.className='home-review-slide';
+        slide.setAttribute('role','group');
+        slide.setAttribute('aria-roledescription','slide');
+        const quote=document.createElement('blockquote');
+        quote.textContent=`“${item.quote}”`;
+        const byline=document.createElement('p');
+        byline.className='teaser-attribution';
+        const details=String(item.details||'Approved client feedback').replace(/^Client feedback\s*·\s*/,'');
+        byline.textContent=`— ${item.name||'Name withheld'} · ${details}`;
+        slide.append(quote,byline);
+        return slide;
+      });
+      homeReviewCarousel.replaceChildren(...cards,cta);
+      const total=cards.length+1;
+      slides().forEach((slide,i)=>slide.setAttribute('aria-label',`${i+1} of ${total}`));
+      homeReviewCarousel.scrollLeft=0;
+      updateReviewControls();
+    })
+    .catch(()=>{/* Keep verified, server-rendered fallback quotes. */});
+  updateReviewControls();
+}
