@@ -1346,3 +1346,32 @@ body.gym-fitness-page .gym-fitness-hero > .service-detail-hero-image {
     max-height:none;
   }
 }
+
+
+/* 22 October 2026: compact, swipeable client feedback — no separate transport promotion. */
+.landing-home .home-teaser-review{min-width:0;overflow:hidden}
+.home-review-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.home-review-top .eyebrow{margin:0}
+.home-review-top>span{font-size:.75rem;font-weight:700;color:#aabeca;white-space:nowrap}
+.home-review-carousel{display:flex;width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.home-review-carousel::-webkit-scrollbar{display:none}
+.home-review-carousel:focus-visible{outline:2px solid var(--gold-light);outline-offset:-2px;border-radius:8px}
+.home-review-slide{box-sizing:border-box;flex:0 0 100%;min-width:0;min-height:220px;display:flex;flex-direction:column;justify-content:center;scroll-snap-align:start;scroll-snap-stop:always;padding:12px 2px}
+.home-teaser-review .home-review-slide blockquote{margin:7px 0 10px;font:600 clamp(.96rem,1.65vw,1.14rem)/1.55 Montserrat,sans-serif;color:#fff;overflow-wrap:break-word}
+.home-teaser-review .home-review-slide .teaser-attribution{margin:4px 0 0;color:#bed1dd;font-size:.78rem}
+.home-review-more-title{margin:0 0 4px;font:800 clamp(1.3rem,2vw,1.6rem)/1.25 Montserrat,sans-serif;color:#fff}
+.home-review-more>p:not(.home-review-more-title){margin:0 0 18px;color:#c4d6e1;font-size:.95rem}
+.home-review-more a{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;padding:10px 0;color:var(--gold-light);font-size:.94rem;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.home-review-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:11px;border-top:1px solid rgba(255,255,255,.12)}
+.home-review-progress{color:#bcd0dd;font-size:.78rem;font-weight:700;font-variant-numeric:tabular-nums}
+.home-review-buttons{display:flex;gap:9px}
+.home-review-buttons button{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.27);border-radius:50%;background:rgba(255,255,255,.07);color:#fff;font-size:.9rem;cursor:pointer}
+.home-review-buttons button:hover:not(:disabled),.home-review-buttons button:focus-visible{border-color:var(--gold-light);color:var(--gold-light)}
+.home-review-buttons button:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+.home-review-buttons button:disabled{opacity:.35;cursor:default}
+@media(max-width:760px){
+  .home-review-slide{min-height:245px;padding:13px 1px}
+  .home-teaser-review .home-review-slide blockquote{font-size:clamp(.93rem,3.7vw,1.1rem);line-height:1.54}
+  .home-review-top>span{font-size:.7rem}
+}
+@media(prefers-reduced-motion:reduce){.home-review-carousel{scroll-behavior:auto}}
